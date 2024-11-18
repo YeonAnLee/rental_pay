@@ -1,0 +1,145 @@
+  /* 헤더영역 */
+  .wrapper {
+    background-color: #F8F9FB;
+  }
+  .header_type3 {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 44px;
+  }
+  .header_type3 h1 {
+    font-size: 1.6rem;
+    font-weight: 600;
+  }
+
+  /*메인 이미지*/
+  .hero-wrapper {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  .hero-wrapper > div {
+    background: url(./common/img/service_center.svg) no-repeat 50% 50%;
+    background-size: 45%;
+    height: 300px;
+  }
+  .hero-wrapper > button {
+    height: 40px;
+    width: 100%;
+    border-radius: 10px;
+    font-size: 1.6rem;
+    font-weight: 600;
+  }
+  .hero-wrapper > button:nth-of-type(1) {
+    background-color: #ebebeb;
+    color: #8C8C8C;
+    margin-bottom: 10px; 
+  }
+  .hero-wrapper > button:nth-of-type(2) {
+    background-color: var(--main-color);
+    color: white;
+  }
+
+  /*자주묻는 질문*/
+  .question-list {
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.question-list > div:nth-of-type(1) {
+  display: flex;
+  padding: 20px 0;
+}
+.question-list > div:nth-of-type(1) button {
+  border: 1px solid #DCDCDC;
+  color: #999999;
+  font-size: 1.2rem;
+  font-weight: 400;
+  width: 100%;
+  height: 35px;
+}
+.question-list > ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.question-list > ul li {
+  border-bottom: 2px solid #FBFBFB;
+  background: url(./common/img/Q.svg) no-repeat 0 9px;
+  background-size: 5%;
+  padding: 10px 0 5px 40px;
+  position: relative;
+  cursor: pointer;
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #333333;
+  transition: color 0.3s;
+}
+.question-list > ul > li:hover {
+  color: var(--main-color);
+}
+.question-list > ul li:after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  background: url(./common/img/right-arrow.svg) 14px 18px;
+  width: 10px;
+  height: 16px;
+  right: 0;
+  top: 15px;
+}
+.question-list > div:last-child button {
+  width: 100%;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #999999;
+  border: 1px solid #DCDCDC;
+  border-radius: 10px;
+  padding: 10px; 
+  margin: 20px 0;
+}
+
+/*푸터 회사정보*/
+footer {
+  margin-top: 50px;
+}
+footer > div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+footer > div h3 {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #333333;
+}
+footer > div p {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #ADADAD;
+}
+footer > div p:nth-of-type(3) {
+  margin-bottom: 20px;
+}
+
+/* 자바스크립트 */
+.on {
+  color: var(--main-color) !important;
+  border-color: var(--main-color) !important;
+}
+
+@media screen and (max-width: 767px) {
+  html {
+    font-size: 55%;
+  }  
+}
+@media screen and (max-width: 500px) {
+  html {
+    font-size: 45%;
+  }  
+}

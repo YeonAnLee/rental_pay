@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modify_email</title>
+  <link rel="stylesheet" href="./common_jy.css">
+  <link rel="stylesheet" href="./reset_jy.css">
+  <link rel="stylesheet" href="./modify_email.css">
+</head>
+<body>
+  <div class="wrapper">
+
+    <!-- 헤더 -->
+    <header class="header_type3">
+      <!-- 뒤로 가기 아이콘 -->
+      <button onclick="history.back()">
+        <svg width="11" height="17" viewBox="0 0 11 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M10.5625 1.08555L9.4709 0.0625001L0.4375 8.5L9.4709 16.9375L10.5625 15.9197L2.62598 8.5L10.5625 1.08555Z"
+            fill="black" />
+        </svg>
+      </button>
+      <h1></h1>
+      <!-- 더보기 아이콘 -->
+      <button data-r-link="menu" style="opacity: 0; pointer-events: none;">
+        <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M22.6562 4.6875H2.34375C2.13655 4.6875 1.93784 4.76981 1.79132 4.91632C1.64481 5.06284 1.5625 5.26155 1.5625 5.46875C1.5625 5.67595 1.64481 5.87466 1.79132 6.02118C1.93784 6.16769 2.13655 6.25 2.34375 6.25H22.6562C22.8635 6.25 23.0622 6.16769 23.2087 6.02118C23.3552 5.87466 23.4375 5.67595 23.4375 5.46875C23.4375 5.26155 23.3552 5.06284 23.2087 4.91632C23.0622 4.76981 22.8635 4.6875 22.6562 4.6875Z" fill="black"/>
+          <path d="M2.34375 13.8125H12.5C12.7072 13.8125 12.9059 13.7302 13.0524 13.5837C13.1989 13.4372 13.2812 13.2385 13.2812 13.0312C13.2812 12.824 13.1989 12.6253 13.0524 12.4788C12.9059 12.3323 12.7072 12.25 12.5 12.25H2.34375C2.13655 12.25 1.93784 12.3323 1.79132 12.4788C1.64481 12.6253 1.5625 12.824 1.5625 13.0312C1.5625 13.2385 1.64481 13.4372 1.79132 13.5837C1.93784 13.7302 2.13655 13.8125 2.34375 13.8125Z" fill="black"/>
+          <path d="M19.5312 19.8125H2.34375C2.13655 19.8125 1.93784 19.8948 1.79132 20.0413C1.64481 20.1878 1.5625 20.3865 1.5625 20.5938C1.5625 20.801 1.64481 20.9997 1.79132 21.1462C1.93784 21.2927 2.13655 21.375 2.34375 21.375H19.5312C19.7385 21.375 19.9372 21.2927 20.0837 21.1462C20.2302 20.9997 20.3125 20.801 20.3125 20.5938C20.3125 20.3865 20.2302 20.1878 20.0837 20.0413C19.9372 19.8948 19.7385 19.8125 19.5312 19.8125Z" fill="black"/>
+        </svg>
+      </button>
+    </header>
+
+    <!-- 메인 -->
+    <main>
+      <h2>이메일 변경</h2>
+      <p>변경하실 이메일을 입력해주세요.</p>
+      <ul>
+        <li>
+          <h3>이메일</h3>
+          <div>
+            <input type="email" name="email">
+            <button>인증번호 전송</button>
+          </div>
+        </li>
+        <li>
+          <h3>인증번호</h3>
+          <div>
+            <input type="text" name="certification_number" maxlength="6" readonly>
+            <button>인증번호 확인</button>
+          </div>
+          <span>재요청</span>
+        </li>
+        <span></span>
+      </ul>
+    </main>
+
+    <!-- 푸터 -->
+    <footer>
+      <button>변경완료</button>
+    </footer>
+  </div>
+
+  <!-- 변경완료 팝업 -->
+  <div class="success-pop" style="display: none;">
+    <p>휴대폰번호가 변경되었습니다.</p>
+    <button>확인</button>
+  </div>
+
+  <!-- 스크립트 -->
+  <script defer>
+    
+    /* 이메일 입력하면 버튼 활성화 */
+    const emailInput = document.getElementsByName("email");
+    let btn = document.querySelectorAll("main > ul > li > div > button");
+
+    emailInput[0].addEventListener("input", (e) => {
+      emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+      if (emailPattern.test(e.target.value)) {
+        btn[0].classList.add("on");
+      } else {
+        btn[0].classList.remove("on");
+      }
+    });
+
+    /* 인증번호 입력하면 버튼 활성화 */
+    const certificationNumber = document.getElementsByName("certification_number");
+
+    certificationNumber[0].addEventListener("input", (e) => {
+      if(e.target.value.length === 6) {
+        btn[1].classList.add("on");
+      } else {
+        btn[1].classList.remove("on");
+      }
+    });
+
+    /* 인증번호 전송 클릭하면 인증번호 readonly 풀리게 */
+    btn[0].addEventListener("click", (e) => {
+      e.target.style.pointerEvents = "none";
+      requestBtn.style.pointerEvents = "auto";
+      emailInput[0].setAttribute("readonly", true)
+      certificationNumber[0].removeAttribute("readonly");
+      certificationNumber[0].focus();
+      randomNumber = randomCode(); // 여기서 랜덤숫자 초기화
+      startTimer(300);
+      alert("임시 비밀번호 = " + randomNumber);
+    })
+
+    /* 임시 인증번호 */
+    let isTrue = false; // 타이머가 돌고 있으면 true
+    let randomNumber;
+
+    function randomCode() {
+      return Math.floor(100000 + Math.random() * 900000).toString();
+    }
+    
+    const timerText = document.querySelector("main > ul > span");
+    const requestBtn = document.querySelector("main > ul > li > span");
+
+    function startTimer(duration) {
+      let timer = duration, minutes, seconds;
+      isTrue = true;
+      
+      let timerInterval = setInterval( () => {
+        minutes = parseInt(timer / 60, 10);
+        seconds = parseInt(timer % 60, 10);
+
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+        timerText.textContent = minutes + ":" + seconds;
+
+        if (--timer < 0) {
+          clearInterval(timerInterval);
+          isTrue = false;
+        }
+      }, 1000);
+    }
+
+    /* 재요청 */
+    requestBtn.addEventListener("click", () => {
+      randomNumber = randomCode(); // 여기서 랜덤숫자 초기화
+      alert("인증번호는 : " + randomNumber);
+      clearInterval(timerInterval);
+      startTimer(300);
+    })
+    
+    /* 인증번호 확인 버튼 */
+    btn[1].addEventListener("click", (e) => {
+      if(certificationNumber[0].value === randomNumber && isTrue)
+        alert("인증성공!")
+      else 
+        alert("인증실패!")
+    });
+
+    /* 변경완료 버튼 */
+    const successBtn = document.querySelector("footer > button");
+    const successPop = document.querySelector(".success-pop");
+    successBtn.addEventListener("click", () => {
+      successPop.style.display = "flex";
+    })
+  </script>
+</body>
+</html>

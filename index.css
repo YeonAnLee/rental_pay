@@ -1,0 +1,235 @@
+@font-face {
+  font-family: 'Pretendard';
+  src: url(../fonts/Pretendard-Regular.woff) format('woff'),
+  url('../fonts/Pretendard-Regular.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 400; /* Regular weight */
+}
+@font-face {
+  font-family: 'Pretendard';
+  src: url(../fonts/Pretendard-Regular.woff) format('woff'),
+  url('../fonts/Pretendard-Regular.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 500; /* Regular weight */
+}
+@font-face {
+  font-family: 'Pretendard';
+  src: url(../fonts/Pretendard-Regular.woff) format('woff'),
+  url('../fonts/Pretendard-Regular.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 600; /* Regular weight */
+}
+* {
+  margin: 0;
+}
+:root {
+  --main-color : #36AEE2;
+  --main-background-color : #F8F9FB;
+  --button-bg-color : #36AEE2;
+  --button-text-color : #fff;
+  --inactive-button-bg-color : #EBEBEB;
+  --inactive-button-text-color : #8C8C8C;
+  --input-bg-color : #F8F9FB;
+  --input-text-color : #ABABAB;
+}
+body {
+  font-family: 'Pretendard', sans-serif;
+  background-color: #EEEFF2;
+}
+.wrapper {
+  max-width: 600px;
+  min-height: 1200px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 0 !important;
+}
+
+/*헤더*/
+header {
+  padding: 100px 30px 0;
+  background-color: var(--main-color);
+  border-radius: 0 0 30px 0;
+}
+.logo-title {
+  display: flex;
+  justify-content: space-between;
+}
+.logo-img {
+  display: flex;
+}
+.logo-img span {
+  margin-left: 10px;
+  color: white;
+}
+.logo-title .more {
+  cursor: pointer;
+}
+.logo-txt {
+  color: white;
+  padding-bottom: 25px;
+  font-weight: 600;
+  margin-top: 10px;
+}
+.blue-txt {
+color: var(--main-color);
+}
+.banner-wrap {
+  display: flex;
+  justify-content: center;
+}
+.banner {
+  width: 100%;
+  background-color: rgba(111, 146, 191, 0.13);
+  padding: 15px 25px;
+  margin: 25px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 500;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* 중앙 버튼들 */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  padding: 0 25px 20px;
+}
+.buttons div {
+  cursor: pointer;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  padding: 20px;
+  position: relative;
+  color: #333333;
+}
+.buttons > div:first-child {
+  padding: 60px 0 0;
+  font-size: 28px;
+  grid-row: span 2;
+  height: 300px;
+  align-items: center;
+  background: url(./common/img/home.svg) center 70% no-repeat;
+  background-size: 50%;
+} 
+.buttons > div:first-child > span:last-child {
+  font-size: 22px;
+}
+.buttons > div:nth-child(2) {
+  background: url(./common/img/book.svg) no-repeat 95% 90% rgba(214, 232, 255, 0.9);
+  background-size: 15%;
+}
+.buttons > div:last-child {
+  background: url(./common/img/money.svg) no-repeat 95% 90%  rgba(120, 170, 0, 0.2);
+  background-size: 15%;
+}
+.buttons > div span:first-child {
+  font-weight: 600;
+}
+.buttons > div span:last-child {
+  color: #999999;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+/*푸터 회사정보*/
+footer {
+  margin-top: 50px;
+  padding: 0 20px;
+}
+footer > div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+footer > div h3 {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333333;
+}
+footer > div p {
+  font-size: 13px;
+  font-weight: 400;
+  color: #ADADAD;
+}
+footer > div p:nth-of-type(3) {
+  margin-bottom: 20px;
+}
+
+/*하단 네비*/
+.bottom-nav {
+  margin: 50px 0 0;
+  display: flex;
+  justify-content: space-around;
+  height: 80px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 20px 20px 0 0;
+  max-width: 600px;
+  width: 100%;
+  min-width: 300px;
+  position: fixed;
+  bottom: 0;
+  background-color: white;
+}
+.bottom-nav > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  cursor: pointer;
+}
+.bottom-nav img {
+  width: 30px;
+  position: relative;
+}
+.bottom-nav > div p {
+  font-weight: 600;
+  font-size: 13px;
+  color: #7D8498;
+  position: relative;
+}
+.bottom-nav > div:nth-of-type(4) > p {
+  top: 20px;
+}
+.bottom-nav > div:nth-of-type(2) > p {
+  top: 20px;
+}
+.bottom-nav > div #home {
+  position: absolute;
+  transform: translateY(-20px);
+  width: 80px;
+  bottom: 20px;
+}
+@media screen and (max-width: 450px) {
+  .buttons > div:first-child > span:first-child {
+    font-size: 24px;
+  }
+  .buttons > div:first-child > span:last-child {
+    font-size: 18px;
+  }
+  .buttons > div span:first-child {
+    font-size: 14px;
+  }
+  .buttons > div span:last-child {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .banner > div {
+    font-size: 12px;
+  }
+  .banner img {
+    width: 30px;
+  }
+  footer > div h3, footer > div p {
+    font-size: 12px;
+  }
+  .buttons > div:first-child {
+    height: 250px;
+  }
+}

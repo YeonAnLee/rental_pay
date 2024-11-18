@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./pay_details.css">
+  <link rel="stylesheet" href="/common/common.css">
+  <link rel="stylesheet" href="/common/reset_jy.css">
+  <link rel="stylesheet" href="./popups_pay_details.css">
+</head>
+<body style="position: relative;">
+   <!-- 결제정보 수정, 변경, 취소 팝업 -->
+   <div class="modify-pop">
+    <button>
+      <h1>결제정보 수정</h1>
+    </button>
+    <button>
+      <h1>송금일 변경</h1>
+    </button>
+    <button>
+      <h1>결제 취소</h1>
+    </button>
+  </div>
+
+  <!-- 취소 사유 선택 팝업 -->
+  <div class="cancle-reason-pop">
+    <div>
+      <h3>취소 사유 선택</h3>
+    </div>
+    <ul>
+      <li>
+        <input type="radio" name="reason" value="카드사 및 할부 변경">
+        <p>카드사 및 할부 변경</p>
+      </li>
+      <li>
+        <input type="radio" name="reason" value="송금액 변경">
+        <p>송금액 변경</p>
+      </li>
+      <li>
+        <input type="radio" name="reason" value="계약서 등록 어려움">
+        <p>계약서 등록 어려움</p>
+      </li>
+      <li>
+        <input type="radio" name="reason" value="송금일이 너무 이름">
+        <p>송금일이 너무 이름</p>
+      </li>
+    </ul>
+    <div>
+      <button>취소</button>
+      <button>완료</button>
+    </div>
+  </div>
+
+  <!-- 결제 영수증 -->
+  <div class="receipt">
+    <h1>영수증</h1>
+    <button>
+      <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M10.4986 18.8824C15.1205 18.8824 18.8804 15.1225 18.8804 10.5009C18.8804 5.87925 15.1205 2.11914 10.4986 2.11914C5.87701 2.11914 2.11719 5.87929 2.11719 10.5009C2.11719 15.1225 5.87701 18.8824 10.4986 18.8824ZM10.4986 3.44148C14.3913 3.44148 17.5584 6.60826 17.5584 10.5009C17.5584 14.3932 14.3913 17.5604 10.4986 17.5604C6.60627 17.5604 3.43953 14.3932 3.43953 10.5009C3.43949 6.60826 6.60622 3.44148 10.4986 3.44148Z" fill="#999999"/>
+        <path d="M7.05833 14.0079C7.20541 14.1524 7.39671 14.2241 7.58756 14.2241C7.78345 14.2241 7.97884 14.1486 8.12695 13.998L10.5003 11.5792L12.8742 13.998C13.0222 14.1486 13.2177 14.2241 13.4134 14.2241C13.6045 14.2241 13.7955 14.1524 13.9426 14.0079C14.2405 13.7157 14.2448 13.2371 13.9525 12.9394L11.559 10.5009L13.9525 8.06207C14.2448 7.76438 14.2405 7.28606 13.9426 6.99374C13.6452 6.70158 13.1668 6.70589 12.8742 7.00358L10.5003 9.42231L8.12691 7.00358C7.83426 6.70564 7.35594 6.70158 7.05825 6.99374C6.76056 7.28606 6.75601 7.76438 7.04857 8.06207L9.44187 10.5009L7.04857 12.9394C6.75609 13.2371 6.76064 13.7157 7.05833 14.0079Z" fill="#999999"/>
+      </svg>
+    </button>
+    <ul>
+      <li>
+        <div>주문번호</div>
+        <p>8sd7s87f68sd76-asd8971df8g76</p>
+      </li>
+      <li>
+        <div>구매자</div>
+        <p>-</p>
+      </li>
+      <li>
+        <div>구매상품</div>
+        <p>렌탈페이 임대료 선불 결제</p>
+      </li>
+    </ul>
+    <ul>
+      <li>
+        <div>카드종류</div>
+        <p>국민카드</p>
+      </li>
+      <li>
+        <div>카드번호</div>
+        <p>1234-1234-1234-1234</p>
+      </li>
+      <li><div>할부</div>
+        <p>일시불</p>
+      </li>
+      <li><div>결제상태</div>
+        <p>완료</p>
+      </li>
+      <li>
+        <div>승인번호</div>
+        <p>23043</p>
+      </li>
+      <li>
+        <div>결제일시</div>
+        <p>2024.09.24 11:07:28</p>
+      </li>
+    </ul>
+    <ul>
+      <li>
+        <div>공급가액</div>
+        <p>2024.09.24 11:07:28</p>
+      </li>
+      <li>
+        <div>면세가액</div>
+        <p>32,400원</p>
+      </li>
+      <li>
+        <div>부가세</div>
+        <p>3600원</p>
+      </li>
+      <li>
+        <div>과세제외액</div>
+        <p>0원</p>
+      </li>
+      <li>
+        <div>합계</div>
+        <p>1,236,000원</p>
+      </li>
+    </ul>
+  </div>
+</body>
+</html>

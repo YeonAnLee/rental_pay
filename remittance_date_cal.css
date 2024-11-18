@@ -1,0 +1,152 @@
+.bg {
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    max-width: 450px;
+    width: 100%;
+    background-color: white;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    margin-bottom: 11px;
+}
+
+.header h3 {
+    flex-grow: 1;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #000;
+    margin-left: 28px;
+}
+
+.header button {
+    margin-left: auto;
+}
+
+.header button img {
+    width: 20px;
+    height: 20px;
+}
+
+.date-navigation {
+    background-color: var(--main-background-color);
+    width: 60%;
+    border-radius: 10px;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 21px;
+    margin: 0 auto;
+}
+
+.date-navigation button,
+.date-navigation span {
+    white-space: nowrap;
+    font-size: 1rem;
+    color: #000;
+    font-weight: 400;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th,
+td {
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    color: #000;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+td {
+    font-weight: 400;
+    color: #000;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.sunday {
+    color: #FC5555;
+    /* 일요일 */
+}
+
+.today {
+    position: relative;
+    color: var(--main-color);
+    border: 1px solid var(--main-color);
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+/* 미디어 쿼리 */
+
+@media screen and (max-width: 500px) {
+    .date-navigation {
+        width: 79%;
+        /* 너비 조정 */
+    }
+
+    .date-navigation button,
+    .date-navigation span {
+        white-space: nowrap;
+        font-size: 0.9rem;
+        color: #000;
+        font-weight: 400;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .container {
+        padding: 12px;
+        /* 패딩 줄이기 */
+    }
+
+    .date-navigation {
+        width: 90%;
+        /* 너비 조정 */
+    }
+
+    .header h3 {
+        font-size: 1rem;
+        /* 글자 크기 줄이기 */
+    }
+
+    .today {
+        width: 40px;
+        /* 동그라미 크기 줄이기 */
+        height: 40px;
+        /* 동그라미 크기 줄이기 */
+    }
+
+    th,
+    td {
+        padding: 8px;
+        /* 셀 패딩 줄이기 */
+        font-size: 0.9rem;
+        /* 글자 크기 줄이기 */
+    }
+}

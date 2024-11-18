@@ -1,0 +1,182 @@
+/* 헤더 영역 */
+.header_type3 {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 44px;
+}
+.header_type3 h1 {
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+/* 상단 회원정보 */
+.infor {
+  background: url(./common/img/profile.svg) no-repeat 0 center;
+  border-bottom: 3px solid #F7F7F7;
+  padding: 20px 0;
+  margin-bottom: 10px;
+}
+.infor > ul > li {
+  padding-left: 5rem;
+  cursor: pointer;
+  font-weight: 600;
+}
+.infor > ul > li:first-child {
+  font-size: 1.6rem;
+  color: #333333;
+}
+.infor > ul > li:last-child {
+  font-size: 1.4rem;
+  color: #666666;
+}
+.infor > ul , .list > ul > li {
+  background: url(./common/img/right-arrow.svg) no-repeat center right;
+  background-size: 4rem 2rem;
+}
+
+/* 중단 메뉴 리스트 */
+.list > ul:nth-child(even) > li:last-child {
+  padding: 25px 0;
+}
+.list > ul > li {
+  padding: 15px 0;
+  cursor: pointer;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #333333;
+}
+.list > ul > li:last-child {
+  border-bottom: 2px solid #F7F7F7;
+}
+
+
+/* 하단 버튼 */
+footer {
+  margin: auto 0 20px;
+}
+footer > button {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--main-color);
+  height: 48px;
+  width: 100%;
+  margin-top: 2rem;
+  border-radius: 10px;
+  border: 1px solid var(--main-color);
+}
+
+/* 탈퇴 안내사항 팝업 */
+.warning-pop, .logout-pop {
+  max-width: 320px;
+  width: 100%;
+  height: auto;
+  background-color: white;
+  padding: 20px ;
+  border-radius: 10px;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 99;
+}
+.logout-pop {
+  height: auto;
+}
+.warning-pop > div:first-child, .logout-pop > div:first-child {
+  text-align: center;
+  background: url(./common/img/warning.svg) no-repeat 2.5rem 0.2rem;
+}
+.logout-pop > div:first-child {
+  padding-top: 20px;
+  background: none;
+}
+.warning-pop > div:first-child > h1, .logout-pop > div:first-child > h1 {
+  padding-left: 2rem;
+  margin-bottom: 1.6rem;
+  font-size: 1.8rem;
+  color: #333333;
+} 
+.warning-pop > div:first-child > p, .logout-pop > div:first-child > p {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #666666;
+}
+.warning-pop > div:last-child, .logout-pop > div:last-child {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 20px 10px 0;
+}
+.warning-pop > div > button, .logout-pop > div > button {
+  height: 38px;
+  width: 70%;
+  border-radius: 5px;
+  border: 1px solid #36AEE2;
+  font-size: 14px;
+  font-weight: 400;
+  color: #36AEE2;
+}
+.warning-pop > div > button:first-child, .logout-pop > div > button:first-child {
+  background-color: #36AEE2;
+  color: white;
+}
+
+/* 회원탈퇴 완료 팝업 */
+.success-pop {
+  max-width: 320px;
+  width: 100%;
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  border-radius: 10px;
+  margin-top: 50px;
+  padding: 20px 0;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 99;
+}
+.success-pop > p {
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #333333;
+}
+.success-pop > button {
+  width: 103px;
+  height: 34px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  border-radius: 5px;
+  color: white;
+  background-color: var(--main-color);
+}
+
+/* 자바스크립트 */
+
+/* 팝업뜰때 가림막 */
+.overlay {
+  background-color: rgba(0,0,0,0.7);
+  z-index: 98;
+  width: 100%;
+  height: 100%;
+  margin: -20px;
+  position: absolute;
+}
+
+/* 호버 이벤트 */
+.infor > ul:hover li, .list li:hover {
+  transition: all 0.3s;
+  color: var(--main-color);
+}
+
+/* 미디어쿼리 */
+@media screen and (max-width: 767px) {
+  html {
+    font-size: 55%;
+  }
+ 
+}

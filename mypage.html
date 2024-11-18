@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./common_jy.css">
+  <link rel="stylesheet" href="./reset_jy.css">
+  <link rel="stylesheet" href="./myapge.css">
+</head>
+<body>
+  <div class="wrapper">
+
+    <!-- 헤더 -->
+    <header class="header_type3">
+      <!-- 뒤로 가기 아이콘 -->
+      <button onclick="history.back()">
+        <svg width="11" height="17" viewBox="0 0 11 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M10.5625 1.08555L9.4709 0.0625001L0.4375 8.5L9.4709 16.9375L10.5625 15.9197L2.62598 8.5L10.5625 1.08555Z"
+            fill="black" />
+        </svg>
+      </button>
+    <h1>마이페이지</h1>
+      <!-- 더보기 아이콘 -->
+      <button data-r-link="menu">
+        <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M22.6562 4.6875H2.34375C2.13655 4.6875 1.93784 4.76981 1.79132 4.91632C1.64481 5.06284 1.5625 5.26155 1.5625 5.46875C1.5625 5.67595 1.64481 5.87466 1.79132 6.02118C1.93784 6.16769 2.13655 6.25 2.34375 6.25H22.6562C22.8635 6.25 23.0622 6.16769 23.2087 6.02118C23.3552 5.87466 23.4375 5.67595 23.4375 5.46875C23.4375 5.26155 23.3552 5.06284 23.2087 4.91632C23.0622 4.76981 22.8635 4.6875 22.6562 4.6875Z" fill="black"/>
+          <path d="M2.34375 13.8125H12.5C12.7072 13.8125 12.9059 13.7302 13.0524 13.5837C13.1989 13.4372 13.2812 13.2385 13.2812 13.0312C13.2812 12.824 13.1989 12.6253 13.0524 12.4788C12.9059 12.3323 12.7072 12.25 12.5 12.25H2.34375C2.13655 12.25 1.93784 12.3323 1.79132 12.4788C1.64481 12.6253 1.5625 12.824 1.5625 13.0312C1.5625 13.2385 1.64481 13.4372 1.79132 13.5837C1.93784 13.7302 2.13655 13.8125 2.34375 13.8125Z" fill="black"/>
+          <path d="M19.5312 19.8125H2.34375C2.13655 19.8125 1.93784 19.8948 1.79132 20.0413C1.64481 20.1878 1.5625 20.3865 1.5625 20.5938C1.5625 20.801 1.64481 20.9997 1.79132 21.1462C1.93784 21.2927 2.13655 21.375 2.34375 21.375H19.5312C19.7385 21.375 19.9372 21.2927 20.0837 21.1462C20.2302 20.9997 20.3125 20.801 20.3125 20.5938C20.3125 20.3865 20.2302 20.1878 20.0837 20.0413C19.9372 19.8948 19.7385 19.8125 19.5312 19.8125Z" fill="black"/>
+        </svg>
+      </button>
+    </header>
+
+    <!-- 메인 -->
+    <main>
+      <div class="infor"> 
+        <ul data-r-link="member_infor">
+          <li>김땡땡</li>
+          <li>010-0000-0000</li>
+        </ul>
+      </div>
+      <div class="list">
+        <ul>
+          <li data-r-link="pay_details">거래내역</li>
+          <li data-r-link="electronic_document">전자문서 관리</li>
+          <li data-r-link="payment_method_management2">결제수단 관리</li>
+        </ul>
+        <ul>
+          <li data-r-link="alarm_setting">알림 설정</li>
+        </ul>
+        <ul>
+          <li data-r-link="inquiry">1:1 문의</li>
+          <li data-r-link="inquiry_history">문의내역</li>
+        </ul>
+        <ul>
+          <li>회원 탈퇴</li>
+        </ul>
+      </div>
+    </main>
+
+    <!-- 푸터 -->
+    <footer>
+      <button>로그아웃</button>
+    </footer>
+    
+    <!-- 탈퇴 안내사항 팝업 -->
+    <div class="warning-pop" style="display: none;">
+      <div>
+        <h1>서비스 탈퇴 안내사항</h1>
+        <p>회원 탈퇴 완료 후,<br>
+          해당 계정 내 모든 데이터가 삭제되며<br>
+          복구 할 수 없습니다.<br>
+        </p>
+      </div>
+      <div>
+        <button onclick="withdrawal()">탈퇴</button>
+        <button onclick="cancleWithdrawal()">취소</button>
+      </div>
+    </div>
+
+    <!-- 회원탈퇴 완료 팝업 -->
+    <div class="success-pop" style="display: none;">
+      <p>탈퇴가 완료되었습니다.</p>
+      <button onclick="successWithdrawal()">확인</button>
+    </div>
+
+    <!-- 탈퇴 안내사항 팝업 -->
+    <div class="logout-pop" style="display: none;">
+      <div>
+        <p>로그아웃 하시겠습니까?</p>
+      </div>
+      <div>
+        <button onclick="logout()">로그아웃</button>
+        <button onclick="cancleLogout()">취소</button>
+      </div>
+    </div>
+
+  </div> <!-- wrapper -->
+  
+  <!-- 스크립트 -->
+  <script defer>
+
+    /* 오버레이 만드는 함수 */
+    const wrapper = document.querySelector(".wrapper");
+    let overlay;
+
+    function createOverlay() {
+      overlay = document.createElement("div");
+      overlay.className = "overlay";
+      wrapper.insertAdjacentElement("afterbegin", overlay);
+    }
+
+    /* 탈퇴 안내사항 팝업 */
+    const withdrwalBtn = document.querySelector(".list > ul:last-child > li");
+    const withdrawalPop = document.querySelector(".warning-pop");
+
+    withdrwalBtn.addEventListener("click", () => {
+      withdrawalPop.style.display = "block";
+      createOverlay();
+    });
+    
+    function withdrawal() { /* 회원탈퇴 진행.. */
+      document.querySelector(".success-pop").style.display = "flex";
+      withdrawalPop.style.display = "none";
+    }
+    
+    function cancleWithdrawal() { /* 회원탈퇴 취소 */
+      withdrawalPop.style.display = "none";
+      overlay.remove();
+    }
+
+    /* 회원탈퇴 완료 */
+    function successWithdrawal() {
+      window.location.href = "https://www.naver.com";
+    }
+
+    /* 로그아웃 팝업 */
+    const logoutBtn = document.querySelector("footer > button");
+    const logoutPop = document.querySelector(".logout-pop");
+    logoutBtn.addEventListener("click", () => {
+      createOverlay();
+      logoutPop.style.display = "block";
+    })
+
+    function cancleLogout() { /* 로그아웃 취소 */
+      logoutPop.style.display = "none";
+      overlay.remove();
+    }
+
+    function logout() { /* 로그아웃 진행 */
+      /* 서버에서 로그아웃 처리 */
+      alert("로그아웃")
+    }
+
+    
+    
+  </script>
+</body>
+</html>

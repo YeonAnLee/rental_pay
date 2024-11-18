@@ -1,0 +1,182 @@
+/* 헤더영역 */
+.header_type3 {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 44px;
+}
+.header_type3 h1 {
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+/* 메인 */
+main {
+  padding-bottom: 10rem;
+}
+.inquiry-history > ul > li {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  row-gap: 15px;
+  border-bottom: 1px solid #F7F7F7;
+  padding: 20px 0;
+}
+.inquiry-history > ul > li > p {
+  width: 55%;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #333333;
+}
+.inquiry-history > ul > li > span:nth-of-type(1) {
+  margin-left: 11rem;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #EC4E39;
+}
+.inquiry-history > ul > li.complete > span:nth-of-type(1) {
+  color: #3DB15B;
+}
+.inquiry-history > ul > li > button {
+  width: 18px;
+  height: 25px;
+  cursor: pointer;
+  background: url(./common/img/down_arrow_inquiry.svg) no-repeat;
+}
+.inquiry-history > ul > li > button.on {
+  background: url(./common/img/up_arrow_inquiry.svg) no-repeat;
+}
+.inquiry-history > ul > li > div {
+  flex-basis: 100%;
+}
+.inquiry-history > ul > li > div > span:first-child {
+  display: inline-block;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #999999;
+}
+.inquiry-history > ul > li > div > button {
+  padding-left: 2rem;
+  display: inline-block;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #999999;
+  cursor: pointer;
+}
+
+/* 답변 내용 */
+.answer {
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: #333333;
+  border-radius: 10px;
+  min-height: 109px;
+  background-color: #F8F9FB;
+  padding: 15px 15px 40px;
+  margin: 10px 0;
+  position: relative;
+}
+.answer > span {
+  position: absolute;
+  color: #999999;
+  font-size: 1.2rem;
+  right: 6px;
+  bottom: 5px;
+}
+
+/* 하단 버튼 */
+footer {
+  margin: auto 0 20px;
+}
+footer > button {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: white;
+  height: 48px;
+  background-color: var(--main-color);
+  width: 100%;
+  border-radius: 10px;
+  transition: all 0.3s;
+}
+footer > button:last-child {
+  border: 1px solid  var(--main-color);
+  background-color: white;
+  color: var(--main-color);
+  margin-top: 1rem;
+}
+
+/* 문의내역 삭제 */
+.warning-pop, .logout-pop {
+  max-width: 320px;
+  width: 100%;
+  background-color: white;
+  padding: 20px ;
+  border-radius: 10px;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 99;
+}
+.logout-pop {
+  height: auto;
+}
+.warning-pop > div:first-child, .logout-pop > div:first-child {
+  text-align: center;
+  background: url(./common/img/warning.svg) no-repeat 2.7rem 0.2rem;
+}
+.logout-pop > div:first-child {
+  padding-top: 20px;
+  background: none;
+}
+.warning-pop > div:first-child > h1, .logout-pop > div:first-child > h1 {
+  padding-left: 2rem;
+  margin-bottom: 1.6rem;
+  font-size: 1.8rem;
+  color: #333333;
+} 
+.warning-pop > div:first-child > p, .logout-pop > div:first-child > p {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #666666;
+}
+.warning-pop > div:last-child, .logout-pop > div:last-child {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 20px 10px;
+}
+.warning-pop > div > button, .logout-pop > div > button {
+  height: 38px;
+  width: 70%;
+  border-radius: 5px;
+  border: 1px solid #36AEE2;
+  font-size: 14px;
+  font-weight: 400;
+  color: #36AEE2;
+}
+.warning-pop > div > button:first-child, .logout-pop > div > button:first-child {
+  background-color: #36AEE2;
+  color: white;
+}
+
+/* 팝업뜰때 가림막 */
+.overlay {
+  background-color: rgba(0,0,0,0.7);
+  z-index: 98;
+  width: 100%;
+  height: 100%;
+  margin: -20px;
+  position: absolute;
+}
+
+/* 미디어쿼리 */
+@media screen and (max-width : 767px) {
+  html {
+    font-size: 55%;
+  }
+}
+@media screen and (max-width : 500px) {
+  html {
+    font-size: 45%;
+  }
+}

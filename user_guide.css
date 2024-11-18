@@ -1,0 +1,110 @@
+/* 헤더영역 */
+.header_type3 {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 44px;
+}
+.header_type3 h1 {
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+/* 네비 */
+nav > ul {
+  display: flex;
+  justify-content: space-around;
+}
+nav > ul > li {
+  width: 25%;
+  position: relative;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #999999;
+  padding-bottom: 5px;
+  cursor: pointer;
+  text-align: center;
+  border-bottom: 2px solid #EBEBEB;
+}
+nav > ul > li.on::after {
+  border-color: var(--main-color);
+}
+/* 호버이벤트 */
+nav > ul > li:hover {
+  color: var(--main-color);
+}
+
+/* 메인 */
+main > h3 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+}
+main > p {
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #3d3d3d;
+}
+.img-area {
+  width: calc(100% - 40px);
+  display: flex;
+  margin: 4rem 2rem 4rem;
+  overflow: hidden;
+  height: 400px;
+  scroll-behavior: smooth;
+}
+.img-area > img {
+  width: 100%;
+  pointer-events: none;
+}
+main > div:last-child {
+  position: absolute;
+  top: 75%;
+  width: calc(100% - 40px);
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 5rem;
+}
+main > div:last-child > button {
+  border: 1.2rem solid #D9D9D9;
+  border-radius: 50%;
+}
+.on {
+  border-color: var(--main-color) !important;
+  color: var(--main-color) !important;
+}
+
+/* 푸터 */
+footer {
+  margin: auto 0 20px;
+}
+footer > p {
+  cursor: pointer;
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: var(--main-color);
+}
+
+/* 미디어쿼리 */
+@media screen and (max-width: 767px) {
+  html {
+    font-size: 55%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .wrapper {
+    min-height: 750px;
+  }
+  .img-area {
+    height: 250px;
+  }
+  footer {
+    margin: auto 0 20px;
+  }
+  main > div:last-child {
+    top: 72%;
+  }
+}

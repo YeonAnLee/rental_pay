@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./common_jy.css">
+  <link rel="stylesheet" href="./reset_jy.css">
+  <link rel="stylesheet" href="./main.css">
+  <link rel="stylesheet" href="./pay_details.css">
+  <title>거래내역</title>
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <div class="logo-title">
+        <span>렌탈페이</span>
+        <button class="more">
+          <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M22.6562 4.6875H2.34375C2.13655 4.6875 1.93784 4.76981 1.79132 4.91632C1.64481 5.06284 1.5625 5.26155 1.5625 5.46875C1.5625 5.67595 1.64481 5.87466 1.79132 6.02118C1.93784 6.16769 2.13655 6.25 2.34375 6.25H22.6562C22.8635 6.25 23.0622 6.16769 23.2087 6.02118C23.3552 5.87466 23.4375 5.67595 23.4375 5.46875C23.4375 5.26155 23.3552 5.06284 23.2087 4.91632C23.0622 4.76981 22.8635 4.6875 22.6562 4.6875Z" fill="black"/>
+            <path d="M2.34375 13.8125H12.5C12.7072 13.8125 12.9059 13.7302 13.0524 13.5837C13.1989 13.4372 13.2812 13.2385 13.2812 13.0312C13.2812 12.824 13.1989 12.6253 13.0524 12.4788C12.9059 12.3323 12.7072 12.25 12.5 12.25H2.34375C2.13655 12.25 1.93784 12.3323 1.79132 12.4788C1.64481 12.6253 1.5625 12.824 1.5625 13.0312C1.5625 13.2385 1.64481 13.4372 1.79132 13.5837C1.93784 13.7302 2.13655 13.8125 2.34375 13.8125Z" fill="black"/>
+            <path d="M19.5312 19.8125H2.34375C2.13655 19.8125 1.93784 19.8948 1.79132 20.0413C1.64481 20.1878 1.5625 20.3865 1.5625 20.5938C1.5625 20.801 1.64481 20.9997 1.79132 21.1462C1.93784 21.2927 2.13655 21.375 2.34375 21.375H19.5312C19.7385 21.375 19.9372 21.2927 20.0837 21.1462C20.2302 20.9997 20.3125 20.801 20.3125 20.5938C20.3125 20.3865 20.2302 20.1878 20.0837 20.0413C19.9372 19.8948 19.7385 19.8125 19.5312 19.8125Z" fill="black"/>
+          </svg>
+        </button>
+      </div>
+    </header>
+    <nav>
+      <button><img src="/common/img/home.svg" alt="home">월세</button>
+    </nav>
+
+    <main>
+      <div class="period">
+        <h1>기간조회</h1>
+        <div>
+          <button>
+              <h3>시작일</h3>
+          </button>
+          <button>
+              <h3>종료일</h3>
+          </button> 
+        </div>
+      </div>
+      <h1 class="title">거래내역</h1>
+      <div class="content">
+        <!-- 1번째 리스트 -->
+        <div class="list">
+          <h3>서울시 강서구 월정로 123-12 101호</h3>
+          <button>
+            <span>펼치기</span>
+            <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4 5.88086L8 -0.000156403L2.39916e-08 -0.000156403L4 5.88086Z" fill="#999999"/>
+            </svg>
+          </button>
+        </div>
+        <div class="details-wrap" style="display: none;">
+          <!-- 결제완료 -->
+          <div class="details yellow">
+            <h3>
+              결제완료
+              <button>
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12.0431 7.89075L11.813 7.75775C11.5391 7.59981 11.3755 7.31631 11.3755 7C11.3755 6.68369 11.5391 6.40019 11.813 6.24225L12.0431 6.10925C12.6714 5.74612 12.8862 4.94462 12.5235 4.31638L12.086 3.55862C11.7242 2.93169 10.9196 2.71644 10.2931 3.07825L10.063 3.21081C9.78913 3.36919 9.46144 3.36919 9.18801 3.21081C8.91413 3.05244 8.75051 2.76937 8.75051 2.45306V2.1875C8.75051 1.46387 8.16163 0.875 7.43801 0.875H6.56301C5.83938 0.875 5.25051 1.46387 5.25051 2.1875V2.4535C5.25051 2.76981 5.08688 3.05288 4.81301 3.21125C4.53913 3.36919 4.21188 3.36963 3.93801 3.21125L3.70788 3.07825C3.08138 2.71644 2.27682 2.93169 1.91457 3.55862L1.47707 4.31638C1.11438 4.94462 1.32919 5.74656 1.95744 6.10925L2.18801 6.24225C2.46188 6.40019 2.62551 6.68369 2.62551 7C2.62551 7.31631 2.46188 7.59981 2.18801 7.75775L1.95788 7.89075C1.32963 8.25344 1.11482 9.05538 1.47751 9.68363L1.91501 10.4414C2.27726 11.0683 3.08182 11.2836 3.70788 10.9218L3.93801 10.7892C4.21188 10.6304 4.53913 10.6312 4.81301 10.7892C5.08688 10.9476 5.25051 11.2306 5.25051 11.5469V11.8125C5.25051 12.5361 5.83938 13.125 6.56301 13.125H7.43801C8.16163 13.125 8.75051 12.5361 8.75051 11.8125V11.5465C8.75051 11.2302 8.91413 10.9471 9.18801 10.7887C9.46144 10.6308 9.78913 10.6304 10.063 10.7887L10.2931 10.9218C10.9196 11.2831 11.7242 11.0679 12.086 10.4414L12.5235 9.68363C12.8862 9.05538 12.6714 8.25344 12.0431 7.89075ZM7.00051 9.1875C5.79432 9.1875 4.81301 8.20619 4.81301 7C4.81301 5.79381 5.79432 4.8125 7.00051 4.8125C8.20669 4.8125 9.18801 5.79381 9.18801 7C9.18801 8.20619 8.20669 9.1875 7.00051 9.1875Z" fill="#404040"/>
+                </svg>
+              </button>
+            </h3>
+            <div>
+                <div>결제완료</div>
+                <div>
+                    <div>2024.09.24 11:07:28</div>
+                    <div>1,236,000원</div>
+                </div>
+            </div>
+            <div>
+                <div>송금예정</div>
+                <div>
+                    <div>2024.09.24</div>
+                    <div>1,200,000원</div>
+                </div>
+            </div>
+            <div>
+                <button>결제 영수증</button>
+            </div>
+            <!-- 결제정보 수정, 변경, 취소 팝업 -->
+            <div class="modify-pop" style="display: none;">
+              <button>
+                <h1 data-r-link="rent_payment">결제정보 수정</h1>
+              </button>
+              <button>
+                <h1>송금일 변경</h1>
+              </button>
+              <button>
+                <h1>결제 취소</h1>
+              </button>
+            </div>
+          </div>
+          <!-- 송금완료 -->
+          <div class="details green">
+            <h3>송금 완료</h3>
+            <div>
+                <div>결제완료</div>
+                <div>
+                    <div>2024.09.24 11:07:28</div>
+                    <div>1,236,000원</div>
+                </div>
+            </div>
+            <div>
+                <div>송금완료</div>
+                <div>
+                    <div>2024.09.24</div>
+                    <divx>1,200,000원</divx>
+                </div>
+            </div>
+            <div>
+                <button>결제 영수증</button>
+            </div>
+          </div>
+          <!-- 결제취소 -->
+          <div class="details black">
+            <h3>결제취소</h3>
+            <div>
+                <div>결제완료</div>
+                <div>
+                    <div>2024.09.24 11:07:28</div>
+                    <div>1,236,000원</div>
+                </div>
+            </div>
+            <div>
+                <div>송금예정</div>
+                <div>
+                    <div>2024.09.24</div>
+                    <div>1,200,000원</div>
+                </div>
+            </div>
+            <div>
+                <button>취소 영수증</button>
+            </div>
+          </div>
+          <!-- 결제요청 -->
+          <div class="details red">
+            <h3>결제요청(타인)</h3>
+            <div>
+                <div>결제요청(타인)</div>
+                <div>
+                    <div>2024.09.24 11:07:28</div>
+                    <div class="price">1,236,000원</div>
+                </div>
+            </div>
+            <div>
+                <div>송금예정</div>
+                <div>
+                    <div>2024.09.24</div>
+                    <div>1,200,000원</div>
+                </div>
+            </div>
+            <div>
+                <button>결제 영수증</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2번째 리스트 -->
+        <div class="list">
+          <h3>서울시 강서구 월정로 123-12 201호</h3>
+          <button>
+            <span>펼치기</span>
+            <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4 5.88086L8 -0.000156403L2.39916e-08 -0.000156403L4 5.88086Z" fill="#999999"/>
+            </svg>
+          </button>
+        </div>
+
+        <!-- 3번째 리스트 -->
+        <div class="list">
+          <h3>서울시 강서구 월정로 123-12 301호</h3>
+          <button>
+            <span>펼치기</span>
+            <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4 5.88086L8 -0.000156403L2.39916e-08 -0.000156403L4 5.88086Z" fill="#999999"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </main>
+
+    <!-- 하단 네비 -->
+    <div class="bottom-nav-wrapper">
+      <div class="bottom-nav">
+        <button class="add-contract">
+          <div>계약 추가</div>
+        </button>
+        <!-- 계약추가 버튼 누르면 나오는 div -->
+        <div class="add-contract_type2" style="display: none;">
+          <ul>
+            <li data-r-link="">기존 계약 연장</li>
+            <li data-r-link="contract_amendment">신규 계약 추가</li>
+          </ul>
+        </div>
+        <!-- X버튼 -->
+        <div class="add-contract-x" style="display: none;"></div>
+        <!-- 하단 네비 버튼 -->
+        <div data-r-link="pay_details">
+          <img src="./common/img/history.svg" alt="">
+          <p>거래내역</p>
+        </div>
+        <div data-r-link="index">
+          <img src="./common/img/home_btn_big.svg" alt="" id="home">
+          <p>Home</p>
+        </div>
+        <div data-r-link="mypage">
+          <img src="./common/img/mypage.svg" alt="">
+          <p>마이페이지</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 취소 사유 선택 팝업 -->
+    <div class="cancle-reason-pop" style="display: none;">
+      <div>
+        <h3>취소 사유 선택</h3>
+      </div>
+      <ul>
+        <li>
+          <input type="radio" name="reason" value="카드사 및 할부 변경">
+          <p>카드사 및 할부 변경</p>
+        </li>
+        <li>
+          <input type="radio" name="reason" value="송금액 변경">
+          <p>송금액 변경</p>
+        </li>
+        <li>
+          <input type="radio" name="reason" value="계약서 등록 어려움">
+          <p>계약서 등록 어려움</p>
+        </li>
+        <li>
+          <input type="radio" name="reason" value="송금일이 너무 이름">
+          <p>송금일이 너무 이름</p>
+        </li>
+      </ul>
+      <div>
+        <button onclick="deleteOverlay(event)">취소</button>
+        <button onclick="success(event)">완료</button>
+      </div>
+    </div>
+
+    <!-- 결제취소 완료 팝업 -->
+    <div class="success-pop" style="display: none;">
+      <p>결제가 취소되었습니다.</p>
+      <button onclick="deleteOverlay2(event)">확인</button>
+    </div>
+
+  </div> <!-- wrapper -->
+
+  <!-- 스크립트 -->
+  <script defer>
+
+    /* 오버레이 만드는 함수 */
+    const wrapper = document.querySelector(".wrapper");
+    let overlay;
+
+    function createOverlay() {
+      overlay = document.createElement("div");
+      overlay.className = "overlay";
+      wrapper.insertAdjacentElement("afterbegin", overlay);
+    }
+
+    function deleteOverlay(e) {
+      const parentDiv = e.target.parentElement.parentElement;
+      parentDiv.style.display = parentDiv.style.display === "none" ? "block" : "none"
+      overlay.remove();
+    }
+    function deleteOverlay2(e) {
+      const parentDiv = e.target.parentElement;
+      parentDiv.style.display = parentDiv.style.display === "none" ? "block" : "none"
+      overlay.remove();
+    }
+
+    /* 수정버튼 */
+    const settingBtn = document.querySelectorAll(".details.yellow > h3 button");
+    const modifyPop = document.querySelectorAll(".modify-pop");
+    settingBtn.forEach((e) => {
+      e.addEventListener("click", () => {
+        const thisPop = e.closest(".details").querySelector(".modify-pop");
+        thisPop.style.display = thisPop.style.display === "none" ? "flex" : "none";
+      })
+    });
+
+    /* 수정버튼 -> 결제취소 */
+    const canclePay = document.querySelectorAll(".modify-pop > button:last-child");
+    const cancleReasonPop = document.querySelector(".cancle-reason-pop");
+    canclePay.forEach((e) => {
+      e.addEventListener("click", () => {
+        cancleReasonPop.style.display = cancleReasonPop.style.display === "none" ? "block" : "none";
+        createOverlay();
+      })
+    });
+
+    /* 드롭다운 */
+    const dropdownBtn = document.querySelectorAll(".list > button");
+    dropdownBtn.forEach((e) => {
+      const detailsWrap = e.parentElement.nextElementSibling;
+      const btnText = e.querySelector("span");
+      const dropdownArrow = e.querySelector("svg");
+      e.addEventListener("click", () => {
+        if(detailsWrap.classList.contains("details-wrap")) {
+          btnText.innerText = btnText.innerText === "펼치기" ? "접가" : "펼치기";
+          detailsWrap.style.display = detailsWrap.style.display === "none" ? "flex" : "none";
+          dropdownArrow.classList.toggle("rotate");
+        }
+      });
+    });
+
+    /* 취소사유 완료 버튼 */
+    const successPop = document.querySelector(".success-pop");
+
+    function success(e) {
+      const parentDiv = e.target.parentElement.parentElement;
+      parentDiv.style.display = parentDiv.style.display === "none" ? "block" : "none"
+      successPop.style.display = "flex";
+    }
+
+    /* 계약추가 버튼 누르는 효과들 */
+    const addContract = document.querySelector(".add-contract");
+    const addContractType2 = document.querySelector(".add-contract_type2");
+    const addContractX = document.querySelector(".add-contract-x");
+    
+    addContract.addEventListener("click", (e) => {
+      addContract.style.display = addContract.style.display === "none" ? "flex" : "none";
+      addContractType2.style.display = addContractType2.style.display === "none" ? "block" : "none";
+      addContractX.style.display = addContractX.style.display === "none" ? "block" : "none";
+    });
+
+    addContractX.addEventListener("click", () => {
+      addContract.style.display = addContract.style.display === "none" ? "flex" : "none";
+      addContractType2.style.display = addContractType2.style.display === "none" ? "block" : "none";
+      addContractX.style.display = addContractX.style.display === "none" ? "block" : "none";
+    });
+  </script>
+</body>
+</html>

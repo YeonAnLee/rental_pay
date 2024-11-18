@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>main</title>
+  <link rel="stylesheet" href="./common_jy.css">
+  <link rel="stylesheet" href="./reset_jy.css">
+  <link rel="stylesheet" href="./main.css">
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <div class="logo-title">
+        <h1 style="font-size: 22px;">렌탈페이</h1>
+        <button class="more" data-r-link="menu">
+          <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M22.6562 4.6875H2.34375C2.13655 4.6875 1.93784 4.76981 1.79132 4.91632C1.64481 5.06284 1.5625 5.26155 1.5625 5.46875C1.5625 5.67595 1.64481 5.87466 1.79132 6.02118C1.93784 6.16769 2.13655 6.25 2.34375 6.25H22.6562C22.8635 6.25 23.0622 6.16769 23.2087 6.02118C23.3552 5.87466 23.4375 5.67595 23.4375 5.46875C23.4375 5.26155 23.3552 5.06284 23.2087 4.91632C23.0622 4.76981 22.8635 4.6875 22.6562 4.6875Z" fill="black"/>
+            <path d="M2.34375 13.8125H12.5C12.7072 13.8125 12.9059 13.7302 13.0524 13.5837C13.1989 13.4372 13.2812 13.2385 13.2812 13.0312C13.2812 12.824 13.1989 12.6253 13.0524 12.4788C12.9059 12.3323 12.7072 12.25 12.5 12.25H2.34375C2.13655 12.25 1.93784 12.3323 1.79132 12.4788C1.64481 12.6253 1.5625 12.824 1.5625 13.0312C1.5625 13.2385 1.64481 13.4372 1.79132 13.5837C1.93784 13.7302 2.13655 13.8125 2.34375 13.8125Z" fill="black"/>
+            <path d="M19.5312 19.8125H2.34375C2.13655 19.8125 1.93784 19.8948 1.79132 20.0413C1.64481 20.1878 1.5625 20.3865 1.5625 20.5938C1.5625 20.801 1.64481 20.9997 1.79132 21.1462C1.93784 21.2927 2.13655 21.375 2.34375 21.375H19.5312C19.7385 21.375 19.9372 21.2927 20.0837 21.1462C20.2302 20.9997 20.3125 20.801 20.3125 20.5938C20.3125 20.3865 20.2302 20.1878 20.0837 20.0413C19.9372 19.8948 19.7385 19.8125 19.5312 19.8125Z" fill="black"/>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <nav>
+      <button><img src="/common/img/home.svg" alt="home">월세</button>
+    </nav>
+
+    <main>
+      <!-- 상단 2개 버튼 -->
+      <section class="btn-wrapper">
+        <div style="background-color: rgba(214, 232, 255, 0.9) ;" data-r-link="user_guide_automatic">
+          <div>이용 가이드</div>
+          <div>사용 전 꼭 읽어주세요!</div>
+        </div>
+        <div style="background-color: rgba(245, 222, 179, 0.35);" data-r-link="auto_payment_management">
+          <div>자동 납부</div>
+          <div>관리하러 가기</div>
+        </div>
+      </section>
+      
+      <!-- 중앙 컨텐츠 -->
+      <section class="content-wrapper">
+        <!-- 메인 타이틀 -->
+        <div class="content-title">
+          <h2>월세 계약</h2>
+          <button data-r-link="rent_payment">
+            <img src="/common//img/smallCard.svg" alt="small_card" style="display: inline;">
+            <span>결제하기</span>
+          </button>
+        </div>
+
+        <!-- 계약목록 -->
+        <div class="content">
+
+          <!-- 1번째 리스트 -->
+          <div class="list">
+            <h3>서울시 강서구 월정로 123-12 101호</h3>
+            <button class="drop">
+              <span>펼치기</span>
+              <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 5.88086L8 -0.000156403L2.39916e-08 -0.000156403L4 5.88086Z" fill="#999999"/>
+              </svg>
+            </button>
+          </div>
+
+          <!-- 상세 정보 -->
+          <div class="details-all-wrap" style="display: none;">
+            <div class="list-detail">
+              <div class="border-none">
+                <h3>2024.09.23 ~ 2025.09.23</h3>
+                <button class="drop">
+                  <span>펼치기</span>
+                  <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4 5.88086L8 -0.000156403L2.39916e-08 -0.000156403L4 5.88086Z" fill="#999999"/>
+                  </svg>
+                </button>
+              </div>
+              <div style="display: none;">
+                <ul>
+                  <li>
+                    <div>주소</div>
+                    <p>서울시 강서구 월정로 123-12 101호</p>
+                  </li>
+                  <li>
+                    <div>임대인 전화</div>
+                    <p>010-1234-5678</p>
+                  </li>
+                  <li>
+                    <div>계약기간</div>
+                    <p>2024.09.23 ~ 2025.09.23</p>
+                  </li>
+                </ul>
+              </div>
+              <div style="display: none;">
+                <ul>
+                  <li>
+                    <div>호실</div>
+                    <p>201호</p>
+                  </li>
+                  <li>
+                    <div>임대유형</div>
+                    <p>월세 선불</p>
+                  </li>
+                  <li>
+                    <div>보증금</div>
+                    <p>500만원</p>
+                  </li>
+                  <li>
+                    <div>납부일</div>
+                    <p>매월13일</p>
+                  </li>
+                </ul>
+                <ul>
+                  <li>
+                    <div>월임대료</div>
+                    <p>30만원</p>
+                  </li>
+                  <li>
+                    <div>월관리비</div>
+                    <p>8만원</p>
+                  </li>
+                  <li>
+                    <div>부가세액</div>
+                    <p>0만원</p>
+                  </li>
+                  <li>
+                    <div>납부총액</div>
+                    <p>38만원</p>
+                  </li>
+                </ul>
+              </div>
+              <div style="display: none;">
+                <button>수정</button>
+                <button>퇴거</button>
+                <button>삭제</button>
+              </div>
+            </div>
+
+            <!-- 납부 내역 -->
+            <div class="payment-wrapper" style="display: none;">
+              <div class="payment-title">
+                <h3>납부내역 <span style="color: #b3b3b3;">1건</span></h3>
+              </div>
+              <!-- 1번째 납부 내역 -->
+              <div class="payment-content type3">
+                <div class="border-none2">
+                  <div>
+                    2024년 11월 / <span style="margin-left: 5px;">63만원</span>
+                  </div>
+                  <button class="drop">
+                    <span style="color: #999999;">펼치기</span>
+                    <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M4 5.88086L8 -0.000156403L2.39916e-08 -0.000156403L4 5.88086Z" fill="#999999"/>
+                    </svg>
+                  </button>
+                </div>
+                <div style="display: none;">
+                  <ul>
+                    <li>
+                      <div>입금일자</div>
+                      <p>납부예정</p>
+                    </li>
+                    <li>
+                      <div>월임대료</div>
+                      <p>납부예정 / 55만원</p>
+                    </li>
+                    <li>
+                      <div>월관리비</div>
+                      <p>납부예정 / 8만원</p>
+                    </li>
+                    <li>
+                      <div>부가세액</div>
+                      <p>납부예정 / 0만원</p>
+                    </li>
+                    <li>
+                      <div>납부총액</div>
+                      <p>납부예정 / 63만원</p>
+                    </li>
+                  </ul>
+                </div>
+                <div style="display: none;">
+                  <button>월세 카드결제</button>
+                  <button>납부 완료</button>
+                </div>
+              </div>
+
+              <!-- 2번째 납부 내역 -->
+              <div class="payment-content type1">
+                <div class="border-none2">
+                  <div>
+                    2024년 10월 / <span style="margin-left: 5px;">63만원</span>
+                  </div>
+                  <button class="drop">
+                    <span style="color: #999999;">펼치기</span>
+                    <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M4 5.88086L8 -0.000156403L2.39916e-08 -0.000156403L4 5.88086Z" fill="#999999"/>
+                    </svg>
+                  </button>
+                </div>
+                <div style="display: none;">
+                  <ul>
+                    <li>
+                      <div>입금일자</div>
+                      <p>미납</p>
+                    </li>
+                    <li>
+                      <div>월임대료</div>
+                      <p><span>0만원</span> / 55만원</p>
+                    </li>
+                    <li>
+                      <div>월관리비</div>
+                      <p><span>0만원</span> / 8만원</p>
+                    </li>
+                    <li>
+                      <div>부가세액</div>
+                      <p><span>0만원</span> / 0만원</p>
+                    </li>
+                    <li>
+                      <div>납부총액</div>
+                      <p><span>0만원</span> / 63만원</p>
+                    </li>
+                  </ul>
+                </div>
+                <div style="display: none;">
+                  <button>월세 카드결제</button>
+                  <button>납부 완료</button>
+                </div>
+              </div>
+
+              <!-- 3번째 납부 내역 -->
+              <div class="payment-content type2">
+                <div class="border-none2">
+                  <div>
+                    2024년 9월 / <span style="margin-left: 5px;">63만원</span>
+                  </div>
+                  <button class="drop">
+                    <span style="color: #999999;">펼치기</span>
+                    <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M4 5.88086L8 -0.000156403L2.39916e-08 -0.000156403L4 5.88086Z" fill="#999999"/>
+                    </svg>
+                  </button>
+                </div>
+                <div style="display: none;">
+                  <ul>
+                    <li>
+                      <div>입금일자</div>
+                      <p>2024.09.24</p>
+                    </li>
+                    <li>
+                      <div>월임대료</div>
+                      <p>55만원 / 55만원</p>
+                    </li>
+                    <li>
+                      <div>월관리비</div>
+                      <p>8만원 / 8만원</p>
+                    </li>
+                    <li>
+                      <div>부가세액</div>
+                      <p>0만원 / 0만원</p>
+                    </li>
+                    <li>
+                      <div>납부총액</div>
+                      <p>63만원 / 63만원</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- 2번째 리스트 -->
+          <div class="list">
+            <h3>서울시 강서구 월정로 123-12 201호</h3>
+            <button class="drop">
+              <span>펼치기</span>
+              <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 5.88086L8 -0.000156403L2.39916e-08 -0.000156403L4 5.88086Z" fill="#999999"/>
+              </svg>
+            </button>
+          </div>
+
+          <!-- 상세 정보 -->
+          <div class="details-all-wrap" style="display: none;">
+            <div class="list-detail">
+              <div class="border-none">
+                <h3>2024.09.23 ~ 2025.09.23</h3>
+                <button class="drop">
+                  <span>펼치기</span>
+                  <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4 5.88086L8 -0.000156403L2.39916e-08 -0.000156403L4 5.88086Z" fill="#999999"/>
+                  </svg>
+                </button>
+              </div>
+              <div style="display: none;">
+                <ul>
+                  <li>
+                    <div>주소</div>
+                    <p>서울시 강서구 월정로 123-12 201호</p>
+                  </li>
+                  <li>
+                    <div>임대인 전화</div>
+                    <p>010-1234-5678</p>
+                  </li>
+                  <li>
+                    <div>계약기간</div>
+                    <p>2024.09.23 ~ 2025.09.23</p>
+                  </li>
+                </ul>
+              </div>
+              <div style="display: none;">
+                <ul>
+                  <li>
+                    <div>호실</div>
+                    <p>201호</p>
+                  </li>
+                  <li>
+                    <div>임대유형</div>
+                    <p>월세 선불</p>
+                  </li>
+                  <li>
+                    <div>보증금</div>
+                    <p>500만원</p>
+                  </li>
+                  <li>
+                    <div>납부일</div>
+                    <p>매월13일</p>
+                  </li>
+                </ul>
+                <ul>
+                  <li>
+                    <div>월임대료</div>
+                    <p>30만원</p>
+                  </li>
+                  <li>
+                    <div>월관리비</div>
+                    <p>8만원</p>
+                  </li>
+                  <li>
+                    <div>부가세액</div>
+                    <p>0만원</p>
+                  </li>
+                  <li>
+                    <div>납부총액</div>
+                    <p>38만원</p>
+                  </li>
+                </ul>
+              </div>
+              <div style="display: none;">
+                <button>수정</button>
+                <button>퇴거</button>
+                <button>삭제</button>
+              </div>
+            </div>
+
+            <!-- 납부 내역 -->
+            <div class="payment-wrapper" style="display: none;">
+              <div class="payment-title">
+                <h3>납부내역 <span style="color: #b3b3b3;">1건</span></h3>
+              </div>
+              <!-- 1번째 납부 내역 -->
+              <div class="payment-content type3">
+                <div class="border-none2">
+                  <div>
+                    2024년 11월 / <span style="margin-left: 5px;">63만원</span>
+                  </div>
+                  <button class="drop">
+                    <span style="color: #999999;">펼치기</span>
+                    <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M4 5.88086L8 -0.000156403L2.39916e-08 -0.000156403L4 5.88086Z" fill="#999999"/>
+                    </svg>
+                  </button>
+                </div>
+                <div style="display: none;">
+                  <ul>
+                    <li>
+                      <div>입금일자</div>
+                      <p>납부예정</p>
+                    </li>
+                    <li>
+                      <div>월임대료</div>
+                      <p>납부예정 / 55만원</p>
+                    </li>
+                    <li>
+                      <div>월관리비</div>
+                      <p>납부예정 / 8만원</p>
+                    </li>
+                    <li>
+                      <div>부가세액</div>
+                      <p>납부예정 / 0만원</p>
+                    </li>
+                    <li>
+                      <div>납부총액</div>
+                      <p>납부예정 / 63만원</p>
+                    </li>
+                  </ul>
+                </div>
+                <div style="display: none;">
+                  <button>월세 카드결제</button>
+                  <button>납부 완료</button>
+                </div>
+              </div>
+
+              <!-- 2번째 납부 내역 -->
+              <div class="payment-content type1">
+                <div class="border-none2">
+                  <div>
+                    2024년 10월 / <span style="margin-left: 5px;">63만원</span>
+                  </div>
+                  <button class="drop">
+                    <span style="color: #999999;">펼치기</span>
+                    <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M4 5.88086L8 -0.000156403L2.39916e-08 -0.000156403L4 5.88086Z" fill="#999999"/>
+                    </svg>
+                  </button>
+                </div>
+                <div style="display: none;">
+                  <ul>
+                    <li>
+                      <div>입금일자</div>
+                      <p>미납</p>
+                    </li>
+                    <li>
+                      <div>월임대료</div>
+                      <p><span>0만원</span> / 55만원</p>
+                    </li>
+                    <li>
+                      <div>월관리비</div>
+                      <p><span>0만원</span> / 8만원</p>
+                    </li>
+                    <li>
+                      <div>부가세액</div>
+                      <p><span>0만원</span> / 0만원</p>
+                    </li>
+                    <li>
+                      <div>납부총액</div>
+                      <p><span>0만원</span> / 63만원</p>
+                    </li>
+                  </ul>
+                </div>
+                <div style="display: none;">
+                  <button>월세 카드결제</button>
+                  <button>납부 완료</button>
+                </div>
+              </div>
+
+              <!-- 3번째 납부 내역 -->
+              <div class="payment-content type2">
+                <div class="border-none2">
+                  <div>
+                    2024년 9월 / <span style="margin-left: 5px;">63만원</span>
+                  </div>
+                  <button class="drop">
+                    <span style="color: #999999;">펼치기</span>
+                    <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M4 5.88086L8 -0.000156403L2.39916e-08 -0.000156403L4 5.88086Z" fill="#999999"/>
+                    </svg>
+                  </button>
+                </div>
+                <div style="display: none;">
+                  <ul>
+                    <li>
+                      <div>입금일자</div>
+                      <p>2024.09.24</p>
+                    </li>
+                    <li>
+                      <div>월임대료</div>
+                      <p>55만원 / 55만원</p>
+                    </li>
+                    <li>
+                      <div>월관리비</div>
+                      <p>8만원 / 8만원</p>
+                    </li>
+                    <li>
+                      <div>부가세액</div>
+                      <p>0만원 / 0만원</p>
+                    </li>
+                    <li>
+                      <div>납부총액</div>
+                      <p>63만원 / 63만원</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3번째 리스트 -->
+          <div class="list">
+            <h3>서울시 강서구 월정로 123-12 301호</h3>
+            <button class="drop">
+              <span>펼치기</span>
+              <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 5.88086L8 -0.000156403L2.39916e-08 -0.000156403L4 5.88086Z" fill="#999999"/>
+              </svg>
+            </button>
+          </div>
+
+          <!-- 상세 정보 -->
+          <div class="details-all-wrap" style="display: none;">
+            <div class="list-detail">
+              <div class="border-none">
+                <h3>2024.09.23 ~ 2025.09.23</h3>
+                <button class="drop">
+                  <span>펼치기</span>
+                  <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4 5.88086L8 -0.000156403L2.39916e-08 -0.000156403L4 5.88086Z" fill="#999999"/>
+                  </svg>
+                </button>
+              </div>
+              <div style="display: none;">
+                <ul>
+                  <li>
+                    <div>주소</div>
+                    <p>서울시 강서구 월정로 123-12 301호</p>
+                  </li>
+                  <li>
+                    <div>임대인 전화</div>
+                    <p>010-1234-5678</p>
+                  </li>
+                  <li>
+                    <div>계약기간</div>
+                    <p>2024.09.23 ~ 2025.09.23</p>
+                  </li>
+                </ul>
+              </div>
+              <div style="display: none;">
+                <ul>
+                  <li>
+                    <div>호실</div>
+                    <p>201호</p>
+                  </li>
+                  <li>
+                    <div>임대유형</div>
+                    <p>월세 선불</p>
+                  </li>
+                  <li>
+                    <div>보증금</div>
+                    <p>500만원</p>
+                  </li>
+                  <li>
+                    <div>납부일</div>
+                    <p>매월13일</p>
+                  </li>
+                </ul>
+                <ul>
+                  <li>
+                    <div>월임대료</div>
+                    <p>30만원</p>
+                  </li>
+                  <li>
+                    <div>월관리비</div>
+                    <p>8만원</p>
+                  </li>
+                  <li>
+                    <div>부가세액</div>
+                    <p>0만원</p>
+                  </li>
+                  <li>
+                    <div>납부총액</div>
+                    <p>38만원</p>
+                  </li>
+                </ul>
+              </div>
+              <div style="display: none;">
+                <button>수정</button>
+                <button>퇴거</button>
+                <button>삭제</button>
+              </div>
+            </div>
+
+            <!-- 납부 내역 -->
+            <div class="payment-wrapper" style="display: none;">
+              <div class="payment-title">
+                <h3>납부내역 <span style="color: #b3b3b3;">1건</span></h3>
+              </div>
+              <!-- 1번째 납부 내역 -->
+              <div class="payment-content type3">
+                <div class="border-none2">
+                  <div>
+                    2024년 11월 / <span style="margin-left: 5px;">63만원</span>
+                  </div>
+                  <button class="drop">
+                    <span style="color: #999999;">펼치기</span>
+                    <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M4 5.88086L8 -0.000156403L2.39916e-08 -0.000156403L4 5.88086Z" fill="#999999"/>
+                    </svg>
+                  </button>
+                </div>
+                <div style="display: none;">
+                  <ul>
+                    <li>
+                      <div>입금일자</div>
+                      <p>납부예정</p>
+                    </li>
+                    <li>
+                      <div>월임대료</div>
+                      <p>납부예정 / 55만원</p>
+                    </li>
+                    <li>
+                      <div>월관리비</div>
+                      <p>납부예정 / 8만원</p>
+                    </li>
+                    <li>
+                      <div>부가세액</div>
+                      <p>납부예정 / 0만원</p>
+                    </li>
+                    <li>
+                      <div>납부총액</div>
+                      <p>납부예정 / 63만원</p>
+                    </li>
+                  </ul>
+                </div>
+                <div style="display: none;">
+                  <button>월세 카드결제</button>
+                  <button>납부 완료</button>
+                </div>
+              </div>
+
+              <!-- 2번째 납부 내역 -->
+              <div class="payment-content type1">
+                <div class="border-none2">
+                  <div>
+                    2024년 10월 / <span style="margin-left: 5px;">63만원</span>
+                  </div>
+                  <button class="drop">
+                    <span style="color: #999999;">펼치기</span>
+                    <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M4 5.88086L8 -0.000156403L2.39916e-08 -0.000156403L4 5.88086Z" fill="#999999"/>
+                    </svg>
+                  </button>
+                </div>
+                <div style="display: none;">
+                  <ul>
+                    <li>
+                      <div>입금일자</div>
+                      <p>미납</p>
+                    </li>
+                    <li>
+                      <div>월임대료</div>
+                      <p><span>0만원</span> / 55만원</p>
+                    </li>
+                    <li>
+                      <div>월관리비</div>
+                      <p><span>0만원</span> / 8만원</p>
+                    </li>
+                    <li>
+                      <div>부가세액</div>
+                      <p><span>0만원</span> / 0만원</p>
+                    </li>
+                    <li>
+                      <div>납부총액</div>
+                      <p><span>0만원</span> / 63만원</p>
+                    </li>
+                  </ul>
+                </div>
+                <div style="display: none;">
+                  <button>월세 카드결제</button>
+                  <button>납부 완료</button>
+                </div>
+              </div>
+
+              <!-- 3번째 납부 내역 -->
+              <div class="payment-content type2">
+                <div class="border-none2">
+                  <div>
+                    2024년 9월 / <span style="margin-left: 5px;">63만원</span>
+                  </div>
+                  <button class="drop">
+                    <span style="color: #999999;">펼치기</span>
+                    <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M4 5.88086L8 -0.000156403L2.39916e-08 -0.000156403L4 5.88086Z" fill="#999999"/>
+                    </svg>
+                  </button>
+                </div>
+                <div style="display: none;">
+                  <ul>
+                    <li>
+                      <div>입금일자</div>
+                      <p>2024.09.24</p>
+                    </li>
+                    <li>
+                      <div>월임대료</div>
+                      <p>55만원 / 55만원</p>
+                    </li>
+                    <li>
+                      <div>월관리비</div>
+                      <p>8만원 / 8만원</p>
+                    </li>
+                    <li>
+                      <div>부가세액</div>
+                      <p>0만원 / 0만원</p>
+                    </li>
+                    <li>
+                      <div>납부총액</div>
+                      <p>63만원 / 63만원</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div> 
+        </div> <!-- content -->
+      </section>
+    </main>
+
+    <!-- 하단 네비 -->
+    <div class="bottom-nav-wrapper">
+      <div class="bottom-nav">
+        <button class="add-contract">
+          <div>계약 추가</div>
+        </button>
+        <!-- 계약추가 버튼 누르면 나오는 div -->
+        <div class="add-contract_type2" style="display: none;">
+          <ul>
+            <li data-r-link="">기존 계약 연장</li>
+            <li data-r-link="contract_amendment">신규 계약 추가</li>
+          </ul>
+        </div>
+        <!-- X버튼 -->
+        <div class="add-contract-x" style="display: none;"></div>
+        <!-- 하단 네비 버튼 -->
+        <div data-r-link="pay_details">
+          <img src="./common/img/history.svg" alt="">
+          <p>거래내역</p>
+        </div>
+        <div data-r-link="index">
+          <img src="./common/img/home_btn_big.svg" alt="" id="home">
+          <p>Home</p>
+        </div>
+        <div data-r-link="mypage">
+          <img src="./common/img/mypage.svg" alt="">
+          <p>마이페이지</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 푸터 -->
+    <footer>
+    </footer>
+
+    
+  </div> <!-- wrapper -->
+
+  <!-- 스크립트 -->
+  <script>
+
+    /* 드롭다운 누르면 화살표 회전 */
+    const dropdownArrow = document.querySelectorAll(".drop");
+    dropdownArrow.forEach((e) => {
+      e.addEventListener("click", () => {
+        e.querySelector("svg").classList.toggle("rotate");
+        e.querySelector("span").innerText = e.querySelector("span").innerText === "펼치기" ? "접기" : "펼치기";
+      })
+    });
+      
+    
+    /* 전체 드롭다운 */
+    const dropdownBtn = document.querySelectorAll(".list > button");
+    dropdownBtn.forEach((e) => {
+      e.addEventListener("click", () => {
+        const detalisAllWrap = e.parentElement.nextElementSibling;
+        if(detalisAllWrap.classList.contains("details-all-wrap")) {
+            detalisAllWrap.style.display = detalisAllWrap.style.display === "none" ? "flex" : "none";
+          }
+      });
+    });
+
+    /* 상세정보만 드롭다운 */
+    const dropdownBtnDetail = document.querySelectorAll(".list-detail .drop");
+    dropdownBtnDetail.forEach((e) => {
+      e.addEventListener("click", () => {
+        const detailContent = e.closest(".list-detail").querySelectorAll("div:not(:first-child)");
+        const detailContentFirst = e.closest(".list-detail").querySelectorAll("div:first-child");
+        const paymentWrapper = e.closest(".list-detail").nextElementSibling;
+        const siblingText = e.previousElementSibling; // 바꿔야 하는 텍스트
+        const changeText = e.parentElement.nextElementSibling.querySelector("li:last-child > p"); // 바꿀 텍스트
+
+        if(siblingText.tagName === "H3") {
+          siblingText.innerText = siblingText.innerText === changeText.innerText ? "월세" : changeText.innerText;
+        }
+
+        if(paymentWrapper.classList.contains("payment-wrapper"))
+        paymentWrapper.style.display = paymentWrapper.style.display === "none" ? "flex" : "none";
+        
+        if(detailContentFirst)
+        detailContentFirst.forEach((e) => { // 보더랑 패딩 없어지게
+          e.classList.toggle("border-none");
+        });
+
+        if(detailContent)
+        detailContent.forEach((e) => { // 첫 번째 div를 제외한 나머지 none
+          e.style.display = e.style.display === "none" ? "flex" : "none";
+        })
+      });
+    })
+
+    /* 납부내역만 드롭다운 */
+    const dropdownBtnPayment = document.querySelectorAll(".payment-content .drop");
+    dropdownBtnPayment.forEach((e) => {
+      const paymentContent = e.closest(".payment-content").querySelectorAll("div:not(:first-child)");
+      const paymentContentFirst = e.closest(".payment-content").querySelector("div:first-child");
+      
+      e.addEventListener("click", () => {
+        paymentContent.forEach((e) => {
+          e.style.display = e.style.display === "none" ? "flex" : "none";
+        })
+        paymentContentFirst.classList.toggle("border-none2");
+      });
+    });
+
+    /* 계약추가 버튼 누르면 추가 div */
+    const addContract = document.querySelector(".add-contract");
+    const addContractType2 = document.querySelector(".add-contract_type2");
+    const addContractX = document.querySelector(".add-contract-x");
+    
+    addContract.addEventListener("click", (e) => { // 계약추가 버튼 누르면 열리게
+      addContract.style.display = addContract.style.display === "none" ? "flex" : "none";
+      addContractType2.style.display = addContractType2.style.display === "none" ? "block" : "none";
+      addContractX.style.display = addContractX.style.display === "none" ? "block" : "none";
+    });
+
+    addContractX.addEventListener("click", () => { // X 버튼 누르면 닫히게
+      addContract.style.display = addContract.style.display === "none" ? "flex" : "none";
+      addContractType2.style.display = addContractType2.style.display === "none" ? "block" : "none";
+      addContractX.style.display = addContractX.style.display === "none" ? "block" : "none";
+    });
+  </script>
+</body>
+</html>

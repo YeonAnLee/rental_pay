@@ -1,0 +1,484 @@
+.wrapper {
+  max-width: 600px;
+  padding: 0 !important;
+}
+
+/*헤더*/
+.header {
+  padding: 0;
+}
+.logo-title {
+  display: flex;
+  justify-content: space-between;
+  padding: 100px 30px 0;
+  margin-bottom: 30px;
+  font-size: 22px;
+  font-weight: 700;
+}
+.logo-title .more {
+  cursor: pointer;
+}
+nav {
+  padding: 0;
+  display: inline-block;
+  border-radius: 0 20px 0 0;
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+nav button {
+  background-color: #F8F9FB;
+  display: flex;
+  padding: 15px 40px;
+  gap: 5px;
+  border-radius: 0 10px 0 0;
+}
+nav img {
+  width: 23px;
+}
+
+/*중앙컨텐츠*/
+main {
+  background-color: #F8F9FB;
+  min-height: 1200px;
+  padding: 0 20px 250px !important;
+}
+
+/*상단 2개 버튼*/
+.btn-wrapper {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+}
+.btn-wrapper img {
+  position: relative;
+  right: -210px;
+  top: 10px;
+  transform: scale(1.3);
+}
+.btn-wrapper > div {
+  width: 100%;
+  height: 100px;
+  margin: 30px 0 30px;
+  border-radius: 10px;
+  font-size: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 10px 15px;
+  cursor: pointer;
+}
+.btn-wrapper > div:nth-child(1) {
+  background: url(./common/img/book.svg) no-repeat 95% 90%;
+  background-size: 30px;
+  background-attachment: scroll;
+}
+.btn-wrapper > div:nth-child(2) {
+  background: url(./common/img/calender.svg) no-repeat 95% 90%;
+  background-size: 30px;
+}
+.btn-wrapper > div div:nth-child(1) {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333333;
+}.btn-wrapper > div div:nth-child(2) {
+  font-size: 14px;
+  font-weight: 400;
+  color: #999999;
+}
+
+/*계약 리스트*/
+.content-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/*타이틀, 결제하기*/
+.content-title button {
+  display: flex;
+  gap: 2px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #999999;
+  border: 1px solid #DCDCDC;
+  border-radius: 10px;
+  padding: 8px 15px;
+  cursor: pointer;
+  background-color: white;
+}
+.content-title button img {
+  width: 20px;
+}
+
+
+
+/*리스트*/
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 30px;
+  position: relative;
+}
+.content .list, .content .list-detail, .payment-content {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 15px 20px;
+  font-size: 14px;
+  color: #333333;
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  position: relative;
+  border-radius: 10px;
+}
+
+/*상세정보 리스트*/
+.content .list-detail, .payment-content {
+  flex-direction: column;
+}
+.list-detail > div {
+  border-bottom: 2px solid #f7f7f7;
+  padding: 15px 0;
+}
+.list-detail > div:first-child {
+  padding: 0 0 15px 0;
+}
+.list-detail > div:last-child {
+  padding: 15px 0 0 0;
+}
+.list-detail > div:last-child {
+  border: none;
+}
+.list-detail > div:first-child {
+  display: flex;
+  justify-content: space-between;
+}
+.list-detail ul li div, .list-detail div:nth-child(3) ul li p {
+  display: inline-block;
+  width: 120px;
+}
+.list-detail ul li div {
+  font-size: 14px;
+  font-weight: 500;
+  color: #999999;
+}
+.list-detail div ul li p {
+  display: inline-block;
+  font-weight: 400;
+  color: #333333;
+  width: 230px;
+}
+.list-detail div:nth-child(3) ul li:nth-child(odd) {
+  float: left;
+}
+.list-detail div:nth-child(3) ul {
+  clear: both;
+}
+.list-detail ul li {
+  margin-bottom: 10px;
+}
+.list-detail > div:last-child {
+  display: flex;
+  justify-content: space-evenly;
+}
+.list-detail > div:last-child button {
+  border: 1px solid #dcdcdc;
+  background-color: white;
+  padding: 8px 8%;
+  border-radius: 10px;
+  color: #999999;
+  font-weight: 500;
+}
+/* 보더줄 */
+.list-detail::before {
+  content: "";
+  border: 1px solid #E7E7E7;
+  position: absolute;
+  left: 10px;
+  top: -29px;
+  height: 28px;
+}
+
+/*납부내역*/
+.payment-wrapper {
+  margin-left: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.payment-wrapper > div {
+  position: relative;
+}
+.payment-content > div {
+  border-bottom: 2px solid #f7f7f7;
+  padding: 15px 0;
+}
+.payment-content > div:first-child {
+  padding: 0 0 15px 0;
+}
+.payment-content > div:last-child {
+  padding: 15px 0 0 0;
+  border: none;
+}
+.payment-content div:first-child svg {
+  display: inline;
+  margin-left: 5px;
+  position: relative;
+  bottom: 1px;
+}
+.payment-content > div:first-child {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 40px;
+  background: url(./common/img/non-payment.svg) no-repeat 0 1px;
+}
+.payment-content.type2 > div:first-child {
+  background: url(./common/img/on-payment.svg) no-repeat 0 1px;
+}
+.payment-content.type3 > div:first-child {
+  background: url(./common/img/must-payment.svg) no-repeat 0 1px;
+}
+.payment-content > div:first-child div:first-child {
+  display: flex;
+  align-items: center;
+}
+.payment-wrapper h1 {
+  font-size: 18px;
+}
+.payment-content div > ul li {
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+.payment-content > div ul li div, .payment-content > div ul li p {
+  display: inline-block;
+  width: 120px;
+}
+.payment-content > div ul li div {
+  color: #999999;
+  font-weight: 500;
+}
+.payment-content > div ul li p {
+  color: #333333;
+  font-weight: 400;
+}
+.payment-content > div:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.payment-content > div:last-child button {
+  border: 1px solid #dcdcdc;
+  background-color: white;
+  padding: 8px 40px;
+  border-radius: 10px;
+  color: #999999;
+  font-weight: 500;
+}
+.payment-content ul li:last-child {
+  margin-bottom: 0;
+}
+.payment-content.type1 span {
+  color: #EC4E39;
+}
+/* 동그라미 */
+.payment-content::before {
+  content: "";
+  border-radius: 50%;
+  background-color: #CECECE;
+  width: 8px;
+  height: 8px;
+  position: absolute;
+  left: -20px;
+}
+.payment-wrapper > div:first-child::before {
+  content: "";
+  border: 1px solid #E7E7E7;
+  height: 86px;
+  position: absolute;
+  left: -17px;
+  top: -29px;
+}
+
+
+/* 상세정보와 납부내역 드롭다운을 위한 wrapper */
+.details-all-wrap { 
+  display: flex;
+  flex-direction: column;
+  gap: 30px;  
+}
+
+/*펼치기 접기 버튼 style*/
+.list button, .list-detail button, .payment-content button {
+  cursor: pointer;
+  font-size: 12px;
+  color: #999999;
+}
+.content .list svg, .list-detail > div:first-child svg {
+  display: inline;
+  margin-left: 5px;
+  position: relative;
+  bottom: 1px;
+}
+.payment-wrapper > h1 {
+  font-size: 18px;
+  margin-left: 30px;
+}
+
+/*하단 네비*/
+.bottom-nav {
+  margin: 50px 0 0;
+  display: flex;
+  justify-content: space-around;
+  height: 80px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 20px 20px 0 0;
+  max-width: 600px;
+  width: 100%;
+  min-width: 300px;
+  position: fixed;
+  bottom: 0;
+  background-color: white;
+}
+.bottom-nav > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  cursor: pointer;
+}
+.bottom-nav img {
+  width: 30px;
+  position: relative;
+  image-rendering: crisp-edges;
+}
+.bottom-nav > div p {
+  font-weight: 600;
+  font-size: 13px;
+  color: #7D8498;
+  position: relative;
+}
+.bottom-nav > div:nth-of-type(4) > p {
+  top: 20px;
+}
+.bottom-nav > div #home {
+  position: absolute;
+  transform: translateY(-20px);
+  width: 80px;
+  bottom: 20px;
+}
+.bottom-nav > .add-contract {
+  cursor: pointer;
+  padding: 10px 35px;
+  font-weight: 600;
+  font-size: 1.4rem;
+  color: white;
+  position: absolute;
+  border-radius: 50px;
+  background: url(./common/img/plus.svg) no-repeat 18px center var(--main-color);
+  right: 5%;
+  bottom: 110px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+.bottom-nav > .add-contract > div {
+  position: relative;
+  width: 100%;
+  right: -10px;
+}
+
+/* 계약추가 버튼 누르면 나오는 div */
+.add-contract_type2 {
+  box-sizing: content-box;
+  position: absolute;
+  background-color: white;
+  border-radius: 20px;
+  width: 150px;
+  right: 30px;
+  bottom: 154px;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #666666;
+}
+.add-contract_type2 > ul > li {
+  text-align: center;
+  padding: 10px 0 10px 20px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+.add-contract_type2 > ul > li:hover {
+  color: var(--main-color);
+}
+.add-contract_type2 > ul > li:first-child {
+  background: url(./common/img/add_contract1.svg) no-repeat 10px center;
+  border-bottom: 2px solid #F7F7F7;
+}
+.add-contract_type2 > ul > li:last-child {
+  background: url(./common/img/add_contract2.svg) no-repeat 9px center;
+}
+
+/* X 버튼 */
+.add-contract-x {
+  position: absolute;
+  right: 30px;
+  bottom: 110px;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  background: url(./common/img/add_contractX.svg) no-repeat center white;
+  cursor: pointer;
+}
+
+/* 스크립트 */
+.border-none {
+  border: none !important;
+  padding: 0 !important;
+}
+.border-none2 {
+  border: none !important;
+  padding: 0 0 0 40px !important;
+}
+.rotate {
+  transform: rotate(180deg);
+}
+
+/* 미디어쿼리 */
+@media screen and (max-width: 767px) {
+  .payment-content > div:first-child {
+    font-size: 11px;
+  }
+  .list h3, .list-detail h3 {
+    font-size: 11px;
+  }
+  .list button, .list-detail button, .payment-content button {
+    font-size: 10px;
+  }
+  .payment-content > div:first-child div:first-child  {
+    position: relative;
+    top: 1px;
+  }
+  .payment-wrapper > div:first-child::before {
+    height: 74px;
+  }
+  .payment-content > div:first-child {
+    background-position: 0 0;
+    background-size: 30px;
+  }
+  .payment-content.type2 > div:first-child {
+    background-position: 0 0;
+    background-size: 30px;
+  }
+  .payment-content.type3 > div:first-child {
+    background-position: 0 0;
+    background-size: 30px;
+  }
+  
+}
+@media screen and (max-width: 580px) {
+  .list-detail div:nth-child(3) ul li:nth-child(odd) {
+    float: none;
+  }
+  .bottom-nav > .add-contract {
+    font-size: 12px;
+  }
+}
+

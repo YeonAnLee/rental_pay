@@ -1,0 +1,45 @@
+/* 헤더 영역 */
+.header_type3 {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 44px;
+}
+.header_type3 h1 {
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+/* 타이틀 */
+.title {
+  padding: 20px 0;
+  border-bottom: 2px solid #F7F7F7;
+}
+.title > h2 {
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+.title > span {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #999999;
+}
+
+/* 내용 */
+.content > p {
+  padding: 20px 0;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #333333;
+}
+
+/* 미디어쿼리 */
+@media screen and (max-width: 767px) {
+  html {
+    font-size: 55%;
+  }
+}
+@media screen and (max-width: 500px) {
+  html {
+    font-size: 45%;
+  }
+}

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./common_jy.css">
+  <link rel="stylesheet" href="./reset_jy.css">
+  <link rel="stylesheet" href="./electronic_document_regist.css">
+  <title>Electronic_document_regist</title>
+</head>
+<body>
+  <div class="wrapper">
+    <!-- 헤더 -->
+    <header class="header_type3">
+      <!-- 뒤로 가기 아이콘 -->
+      <button onclick="history.back()">
+        <svg width="11" height="17" viewBox="0 0 11 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M10.5625 1.08555L9.4709 0.0625001L0.4375 8.5L9.4709 16.9375L10.5625 15.9197L2.62598 8.5L10.5625 1.08555Z"
+            fill="black" />
+        </svg>
+      </button>
+    <h1>전자 문서</h1>
+      <!-- 더보기 아이콘 -->
+      <button data-r-link="menu">
+        <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M22.6562 4.6875H2.34375C2.13655 4.6875 1.93784 4.76981 1.79132 4.91632C1.64481 5.06284 1.5625 5.26155 1.5625 5.46875C1.5625 5.67595 1.64481 5.87466 1.79132 6.02118C1.93784 6.16769 2.13655 6.25 2.34375 6.25H22.6562C22.8635 6.25 23.0622 6.16769 23.2087 6.02118C23.3552 5.87466 23.4375 5.67595 23.4375 5.46875C23.4375 5.26155 23.3552 5.06284 23.2087 4.91632C23.0622 4.76981 22.8635 4.6875 22.6562 4.6875Z" fill="black"/>
+          <path d="M2.34375 13.8125H12.5C12.7072 13.8125 12.9059 13.7302 13.0524 13.5837C13.1989 13.4372 13.2812 13.2385 13.2812 13.0312C13.2812 12.824 13.1989 12.6253 13.0524 12.4788C12.9059 12.3323 12.7072 12.25 12.5 12.25H2.34375C2.13655 12.25 1.93784 12.3323 1.79132 12.4788C1.64481 12.6253 1.5625 12.824 1.5625 13.0312C1.5625 13.2385 1.64481 13.4372 1.79132 13.5837C1.93784 13.7302 2.13655 13.8125 2.34375 13.8125Z" fill="black"/>
+          <path d="M19.5312 19.8125H2.34375C2.13655 19.8125 1.93784 19.8948 1.79132 20.0413C1.64481 20.1878 1.5625 20.3865 1.5625 20.5938C1.5625 20.801 1.64481 20.9997 1.79132 21.1462C1.93784 21.2927 2.13655 21.375 2.34375 21.375H19.5312C19.7385 21.375 19.9372 21.2927 20.0837 21.1462C20.2302 20.9997 20.3125 20.801 20.3125 20.5938C20.3125 20.3865 20.2302 20.1878 20.0837 20.0413C19.9372 19.8948 19.7385 19.8125 19.5312 19.8125Z" fill="black"/>
+        </svg>
+      </button>
+    </header>
+
+    <!-- 메인 -->
+    <main>
+      <section class="content">
+        <div>
+          <input type="text" placeholder="제목을 입력해주세요">
+        </div>
+        <div>
+          <h3>계약서를 등록해주세요</h3>
+          <p>PNG, JPG, JPENG, PDF 확장자의 파일만<br> 업로드 할 수 있어요.</p>
+          <label for="file-input" style="position: relative; top: 3rem;">
+            <div>
+              <input type="file" id="file-input" accept=".png, .jpg, .jpeg, .pdf" style="display: none;">
+              파일 찾기
+            </div>
+          </label>
+          <img id="preview-img" alt="img" class="none">
+          <span id="delete-img" class="none">
+            <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10.4986 18.8824C15.1205 18.8824 18.8804 15.1225 18.8804 10.5009C18.8804 5.87925 15.1205 2.11914 10.4986 2.11914C5.87701 2.11914 2.11719 5.87929 2.11719 10.5009C2.11719 15.1225 5.87701 18.8824 10.4986 18.8824ZM10.4986 3.44148C14.3913 3.44148 17.5584 6.60826 17.5584 10.5009C17.5584 14.3932 14.3913 17.5604 10.4986 17.5604C6.60627 17.5604 3.43953 14.3932 3.43953 10.5009C3.43949 6.60826 6.60622 3.44148 10.4986 3.44148Z" fill="#999999"/>
+              <path d="M7.05833 14.0079C7.20541 14.1524 7.39671 14.2241 7.58756 14.2241C7.78345 14.2241 7.97884 14.1486 8.12695 13.998L10.5003 11.5792L12.8742 13.998C13.0222 14.1486 13.2177 14.2241 13.4134 14.2241C13.6045 14.2241 13.7955 14.1524 13.9426 14.0079C14.2405 13.7157 14.2448 13.2371 13.9525 12.9394L11.559 10.5009L13.9525 8.06207C14.2448 7.76438 14.2405 7.28606 13.9426 6.99374C13.6452 6.70158 13.1668 6.70589 12.8742 7.00358L10.5003 9.42231L8.12691 7.00358C7.83426 6.70564 7.35594 6.70158 7.05825 6.99374C6.76056 7.28606 6.75601 7.76438 7.04857 8.06207L9.44187 10.5009L7.04857 12.9394C6.75609 13.2371 6.76064 13.7157 7.05833 14.0079Z" fill="#999999"/>
+            </svg>
+          </span>
+        </div>
+      </section>
+    </main>
+
+    <!-- 푸터 -->
+    <footer>
+      <button onclick="success()">등록하기</button>
+    </footer>
+
+    <!-- 계약서 등록 완료 팝업 -->
+    <div class="success-pop" style="display: none;">
+      <p>계약서가 등록되었습니다.</p>
+      <button data-r-link="electronic_document">확인</button>
+    </div>
+
+  </div> <!-- wrapper -->
+
+  <script defer>
+    /* 이미지 삭제 */
+    const deletImg = document.getElementById("delete-img");
+    deletImg.addEventListener('click', (e) => {
+      if(confirm("계약서를 삭제하시겠습니까?")) {
+        e.currentTarget.classList.add("none");
+        deletImg.previousElementSibling.classList.add("none");
+        deletImg.previousElementSibling.removeAttribute("src");
+        validateBtn();
+      } else return;
+    });
+
+    /* 파일 업로드시 미리보기 */
+    const fileInput = document.getElementById("file-input");
+    const previewImg = document.getElementById("preview-img");
+    fileInput.addEventListener("change", (e) => {
+      previewImg.classList.remove("none");
+      deletImg.classList.remove("none");
+      const file = e.target.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = function(event) {
+            previewImg.src = event.target.result; 
+        }
+        reader.readAsDataURL(file); 
+      }
+    })
+
+    /* 버튼 유효성 검사 */
+    let isTrue = false; 
+    const input = document.querySelector(".content > div:first-child > input");
+    
+    input.addEventListener("input", () => {
+        validateBtn();
+    });
+
+    previewImg.addEventListener("load", () => {
+        validateBtn();
+    });
+
+    function validateBtn() {
+        if (input.value.length !== 0 && previewImg.src !== "") {
+            isTrue = true;
+        } else {
+            isTrue = false;
+        }
+        const btn = document.querySelector("footer > button");
+        btn.classList.toggle("btn-on", isTrue);
+    }
+
+    /* 등록하기 버튼 */
+    const successPop = document.querySelector(".success-pop");
+    const wrapper = document.querySelector(".wrapper");
+    
+    function success() {
+      let overlay = document.createElement("div");
+      overlay.className = "overlay";
+      wrapper.insertAdjacentElement("afterbegin", overlay);
+      successPop.style.display = "flex";
+    }
+  </script>
+  </body>
+</html>

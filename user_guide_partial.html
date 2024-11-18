@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User_guide</title>
+  <link rel="stylesheet" href="./common_jy.css">
+  <link rel="stylesheet" href="./reset_jy.css">
+  <link rel="stylesheet" href="user_guide.css">
+</head>
+<body>
+  <div class="wrapper">
+    
+    <!-- 헤더 -->
+    <header class="header_type3">
+      <!-- 뒤로 가기 아이콘 -->
+      <button onclick="history.back()">
+        <svg width="11" height="17" viewBox="0 0 11 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M10.5625 1.08555L9.4709 0.0625001L0.4375 8.5L9.4709 16.9375L10.5625 15.9197L2.62598 8.5L10.5625 1.08555Z"
+            fill="black" />
+        </svg>
+      </button>
+      <h1>이용 가이드</h1>
+      <!-- 더보기 아이콘 -->
+      <button data-r-link="menu">
+        <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M22.6562 4.6875H2.34375C2.13655 4.6875 1.93784 4.76981 1.79132 4.91632C1.64481 5.06284 1.5625 5.26155 1.5625 5.46875C1.5625 5.67595 1.64481 5.87466 1.79132 6.02118C1.93784 6.16769 2.13655 6.25 2.34375 6.25H22.6562C22.8635 6.25 23.0622 6.16769 23.2087 6.02118C23.3552 5.87466 23.4375 5.67595 23.4375 5.46875C23.4375 5.26155 23.3552 5.06284 23.2087 4.91632C23.0622 4.76981 22.8635 4.6875 22.6562 4.6875Z" fill="black"/>
+          <path d="M2.34375 13.8125H12.5C12.7072 13.8125 12.9059 13.7302 13.0524 13.5837C13.1989 13.4372 13.2812 13.2385 13.2812 13.0312C13.2812 12.824 13.1989 12.6253 13.0524 12.4788C12.9059 12.3323 12.7072 12.25 12.5 12.25H2.34375C2.13655 12.25 1.93784 12.3323 1.79132 12.4788C1.64481 12.6253 1.5625 12.824 1.5625 13.0312C1.5625 13.2385 1.64481 13.4372 1.79132 13.5837C1.93784 13.7302 2.13655 13.8125 2.34375 13.8125Z" fill="black"/>
+          <path d="M19.5312 19.8125H2.34375C2.13655 19.8125 1.93784 19.8948 1.79132 20.0413C1.64481 20.1878 1.5625 20.3865 1.5625 20.5938C1.5625 20.801 1.64481 20.9997 1.79132 21.1462C1.93784 21.2927 2.13655 21.375 2.34375 21.375H19.5312C19.7385 21.375 19.9372 21.2927 20.0837 21.1462C20.2302 20.9997 20.3125 20.801 20.3125 20.5938C20.3125 20.3865 20.2302 20.1878 20.0837 20.0413C19.9372 19.8948 19.7385 19.8125 19.5312 19.8125Z" fill="black"/>
+        </svg>
+      </button>
+    </header>
+
+    <!-- 네비 -->
+    <nav>
+      <ul>
+        <li data-r-link="user_guide_automatic">자동납부</li>
+        <li class="on" data-r-link="user_guide_partial">부분결제</li>
+        <li data-r-link="user_guide_non-pay">미납관리</li>
+        <li data-r-link="user_guide_prepay">선불결제</li>
+      </ul>
+    </nav>
+
+    <!-- 메인 -->
+    <main>
+      <div class="img-area">
+        <img src="./common/img/부분결제img1.svg" alt="">
+      </div>
+      <h3>부분결제도 가능한가요?</h3>
+      <p>
+        결제 화면에서 원하시는 금액으로<br>
+        수정하시면 자동으로 부분결제가 가능합니다
+      </p>
+      <div>
+        <button class="on"></button>
+      </div>
+    </main>
+
+    <!-- 푸터 -->
+    <footer>
+      <p>더 궁금한 점이 있으신가요?<br>자주 묻는 질문 바로가기 ></p>
+    </footer>
+  </div>
+
+  <script>
+  
+    /* 이미지 슬라이드 */
+    const imgArea = document.querySelector(".img-area");
+    let isDragging = false;
+    let startX;
+    let scrollLeft;
+    const rect = imgArea.getBoundingClientRect();
+
+    // 터치로 슬라이드는 보류..
+    /* // 마우스 누를 때
+    const startDrag = (e) => {
+      isDragging = true;
+      startX = e.touches ? e.touches[0].pageX - rect.left : e.pageX - rect.left; // 터치 기기일 경우도
+      scrollLeft = imgArea.scrollLeft;
+      imgArea.style.cursor = "grabbing";
+    };
+
+     // 마우스 움직일 때
+    const moveDrag = (e) => {
+      if (!isDragging) return;
+      e.preventDefault();
+      const x = e.touches ? e.touches[0].pageX - rect.left : e.pageX - rect.left;
+      const walk = (x - startX);
+      imgArea.scrollLeft = scrollLeft - walk;
+    };
+
+    // 마우스 뗄 때
+    const endDrag = (e) => {
+      isDragging = false;
+      imgArea.style.cursor = "grab";
+      const walk = (startX - (e.touches ? e.touches[0].pageX - rect.left : e.pageX - rect.left));
+      if (Math.abs(walk) > 50) {
+          const imageWidth = imgArea.offsetWidth;
+          const currentIndex = Math.round(imgArea.scrollLeft / imageWidth);
+          imgArea.scrollLeft = currentIndex * imageWidth; 
+          updateImgBtn(currentIndex); 
+      }
+    }; 
+
+    // 데스크탑 마우스 이벤트 
+    imgArea.addEventListener("mousedown", startDrag);
+    imgArea.addEventListener("mouseup", endDrag);
+    imgArea.addEventListener("mousemove", moveDrag);
+    
+    // 스마트폰 터치 이벤트 
+    imgArea.addEventListener("touchstart", startDrag);
+    imgArea.addEventListener("touchend", endDrag);
+    imgArea.addEventListener("touchmove", moveDrag); */
+
+    // 버튼 누르면 이미지 이동 
+    const imgBtn = document.querySelectorAll("main > div:last-child > button");
+
+    imgBtn.forEach((e, i) => {
+        e.addEventListener("click", () => {
+            const imageWidth = imgArea.offsetWidth;
+            imgArea.scrollLeft = i * imageWidth; 
+            updateImgBtn(i); 
+            let h3 = document.querySelector("main > h3");
+            let p = document.querySelector("main > p");
+            if(i > 0) {
+              h3.innerText = "";
+              p.innerHTML = "사유란에 적절한 사유를 입력 후 진행되는<br> 다음 화면에서 증빙되는 사진을 등록해주세요"
+            } else if(i == 0) {
+              h3.innerText = "부분결제도 가능한가요?";
+              p.innerHTML = "결제 화면에서 원하시는 금액으로<br> 수정하시면 자동으로 부분결제가 가능합니다"
+            }
+        });
+    });
+
+    // 이미지 슬라이드하면 버튼 색도 바뀌게 
+    function updateImgBtn(index) {
+        imgBtn.forEach(btn => btn.classList.remove("on")); 
+        imgBtn[index].classList.add("on"); 
+    }
+  </script>
+</body>
+</html>

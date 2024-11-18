@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./common_jy.css">
+  <link rel="stylesheet" href="./reset_jy.css">
+  <style>
+    .withdrawal-pop {
+      width: 320px;
+      height: 230px;
+      background-color: white;
+      padding: 20px ;
+      border-radius: 10px;
+    }
+    .withdrawal-pop > div:first-child {
+      text-align: center;
+      background: url(./common/img/warning.svg) no-repeat 2.7rem 0.2rem;
+    }
+    .withdrawal-pop > div:first-child > h1 {
+      padding-left: 2rem;
+      margin-bottom: 1.6rem;
+      font-size: 1.8rem;
+      color: #333333;
+    } 
+    .withdrawal-pop > div:first-child > p {
+      font-size: 1.3rem;
+      font-weight: 500;
+      color: #666666;
+    }
+    .withdrawal-pop > div:last-child {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      padding: 20px 10px;
+    }
+    .withdrawal-pop > div > button {
+      height: 38px;
+      width: 70%;
+      border-radius: 5px;
+      border: 1px solid #36AEE2;
+      font-size: 14px;
+      font-weight: 400;
+      color: #36AEE2;
+    }
+    .withdrawal-pop > div > button:first-child {
+      background-color: #36AEE2;
+      color: white;
+    }
+
+    .success-pop {
+      width: 320px;
+      display: flex;
+      gap: 2rem;
+      flex-direction: column;
+      align-items: center;
+      background-color: white;
+      border-radius: 10px;
+      margin-top: 50px;
+      padding: 20px 0;
+    }
+    .success-pop > p {
+      text-align: center;
+      font-size: 1.3rem;
+      font-weight: 500;
+      color: #333333;
+    }
+    .success-pop > button {
+      width: 103px;
+      height: 34px;
+      font-size: 1.2rem;
+      font-weight: 500;
+      border-radius: 5px;
+      color: white;
+      background-color: var(--main-color);
+    }
+  </style>
+</head>
+<body>
+  <!-- 탈퇴 안내사항 팝업 -->
+  <div class="withdrawal-pop">
+    <div>
+      <h1>서비스 탈퇴 안내사항</h1>
+      <p>회원 탈퇴 완료 후,<br>
+        해당 계정 내 모든 데이터가 삭제되며<br>
+        복구 할 수 없습니다.<br>
+      </p>
+    </div>
+    <div>
+      <button>탈퇴</button>
+      <button>취소</button>
+    </div>
+  </div>
+
+  <!-- 회원탈퇴 완료 팝업 -->
+  <div class="success-pop">
+    <p>탈퇴가 완료되었습니다.</p>
+    <button>확인</button>
+  </div>
+</body>
+</html>

@@ -1,0 +1,129 @@
+/*결제정보 수정, 변경, 취소 팝업*/
+.modify-pop {
+  max-width: 130px;
+  width: 100%;
+  font-size: 14px;
+  font-weight: 400;
+  background-color: white;
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: absolute;
+}
+.modify-pop button {
+  text-align: start;
+}
+.modify-pop > button:last-child {
+  color: #EC4E39;
+  background: url(./common/img/cancle.svg) no-repeat 0 5px;
+}
+.modify-pop > button:first-child {
+  background: url(./common/img/modify.svg) no-repeat 0 5px;
+}
+.modify-pop > button:nth-child(2) {
+  background: url(./common/img/change_calendar.svg) no-repeat 0 5px;
+}
+.modify-pop h1 {
+  margin-left: 20px;
+}
+
+/*취소 사유*/
+.cancle-reason-pop {
+  max-width: 250px;
+  width: 100%;
+  background-color: white;
+  position: absolute;
+  bottom: 50%;
+  right: 100px;
+  border-radius: 5px;
+}
+.cancle-reason-pop > div:first-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+}
+.cancle-reason-pop > ul {
+  background-color: #F8F9FB;
+  padding: 20px 10px;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.cancle-reason-pop > ul input, .cancle-reason-pop > ul li p {
+  display: inline-block;
+}
+.cancle-reason-pop > div:last-child {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 20px 10px;
+}
+.cancle-reason-pop > div > button {
+  height: 38px;
+  width: 70%;
+  border-radius: 5px;
+  border: 1px solid #36AEE2;
+  font-size: 14px;
+  font-weight: 400;
+  color: #36AEE2;
+}
+.cancle-reason-pop > div > button:last-child {
+  background-color: #36AEE2;
+  color: white;
+}
+
+/*결제, 취소 영수증*/
+.receipt {
+  max-width: 400px;
+  padding: 0;
+  background-color: white;
+  font-size: 16px;
+  padding: 30px 20px;
+  text-align: center;
+  border-radius: 10px;
+  position: absolute;
+  left: 50rem;
+  bottom: 10px;
+}
+.receipt h1 {
+  font-size: 18px;
+  font-weight: 600;
+}
+.receipt > ul {
+  border-bottom: 2px solid #F7F7F7;
+  padding: 20px 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.receipt > ul:last-child {
+  border-bottom: none;
+}
+.receipt > ul li {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  font-size: 14px
+}
+.receipt > ul li div {
+  color: #666666;
+}
+.receipt > ul li p {
+  color: #333333;
+  font-weight: 600;
+  width: 70%;
+  text-align: end;
+}
+.receipt > ul:last-child > li:last-child div, .receipt > ul:last-child > li:last-child p {
+  color: #1565C0;
+}
+.receipt button {
+  position: absolute;
+  right: 16px;
+  top: 16px;
+}
+
